@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>ADD PATEINT</title>
+        <style>
+            
+          body{
+                
+                background-image: Url("source/Image/woyin.jpg");
+                background-size: 100%;
+                background-position: center;
+            }
+             .conntrol-textfield{
+               display: flex;
+               width: 150px;
+               height: 25px;
+              margin: 5px;
+               
+             
+            } 
+            .btn-control{
+              
+                margin: 10px;   
+            }
+            .form-control{
+                 display: flex; 
+              width: 80px;
+            }
+            .text_label{
+                 display: flex;
+               
+            }
+            .addp-control{
+                display: flex;
+                margin-right: 10px;
+              
+            }
+            .col-sm-8{
+              display: flex; 
+              margin: 5px;
+            }
+            .btn-group-justified{
+                 display: flex; 
+              margin: 10px 10px;
+            }
+        </style>
+            
+    </h:head>
+    <h:body>
+      
+      
+       
+            <div class="addp-control">
+                
+            <h:form>
+               <h2>ADD NEW PATEINT</h2>  
+                <div class="text_label">   
+         
+           First Name: <h:inputText id="firstName" class="conntrol-textfield"/><br/>
+            </div>
+                <div class="text_label">
+            
+           Last Name: <h:inputText id="lasttName" class="conntrol-textfield"/><br/>
+             </div>
+                <div class="text_label" style="display: flex;">
+            
+                 <div class="col-sm-8">
+                        Gender:<h:selectOneRadio class="btn-group-justified" value="sa">   
+                            
+                             <f:selectItem itemValue="Male" itemLabel="Male" />  
+                             <f:selectItem itemValue="Female" itemLabel="Female" />
+                        </h:selectOneRadio>
+                    
+                    </div>
+              </div>
+               
+              <div class="text_label">
+             
+            ID:<h:inputText id="pid" class="conntrol-textfield"/><br/>
+                
+             </div>
+                  <div class="text_label">
+              
+            Dr.Name:<h:inputText id="Dr_Name" class="conntrol-textfield"/><br/>
+              </div>
+               <div class="text_label">
+              
+            Blood Group:<h:inputText id="bl_group" class="conntrol-textfield"/><br/>
+               </div>
+                <div class="text_label">
+                
+              Address:<h:inputText id="address" class="conntrol-textfield"/><br/>
+                 </div>
+                  <div class="text_label">
+                 
+            Contact:<h:inputText id="contact" class="conntrol-textfield"/><br/>
+                 </div>
+                <div class="text_label">
+                  <div class="col-sm-8">  
+                      <div class="col-sm-8">
+            Date: <h:selectOneMenu value="fdfdf" class="form-control" >                      	
+                        </h:selectOneMenu>
+                           </div>
+                      <div class="col-sm-8">                        
+                        <h:selectOneMenu value="ffd" class="form-control" >                         	
+                        </h:selectOneMenu>
+                          </div>
+                          <div class="col-sm-8">                   
+                        <h:selectOneMenu value="ddff" class="form-control" >                            	
+                        </h:selectOneMenu>
+                                            </div>
+                    </div>
+                  </div>
+               <div style="display: flex;" class="btn">
+                   <div>
+                  <h:commandButton class="btn-control" id="add" value="ADD" action="test"/>  
+                  </div>
+                  <div>
+                  <h:commandButton class="btn-control" id="update" value="UPDATE" action="test"/> 
+                  </div>
+                  <div>
+                  <h:commandButton class="btn-control" id="delete" value="DELETE" action="test"/>
+                  </div>
+                  <div>
+                   <h:commandButton class="btn-control" id="main_page" value="MAIN" action="homepage"/> 
+                   </div>
+                   </div>
+            </h:form>
+             </div> 
+         
+       
+    </h:body>
+</html>

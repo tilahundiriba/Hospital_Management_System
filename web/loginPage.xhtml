@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>LOGIN TITLE</title>
+        <style>
+            body{
+                
+                background-image: Url("source/Image/woyin.jpg");
+                background-size: 100%;
+                background-position: center;
+            }
+            .intext1{
+             width: 350px;
+             height: 200px;
+                margin-right: 20px;
+                margin-left: 20px;
+                margin-top: 10px; 
+                
+        }
+        fieldset{
+            background-color: greenyellow;
+              margin-right: 20px;
+                margin-left: 20px;
+                margin-top: 4px; 
+                height: 100px;   
+              margin-right: 20px;
+                margin-left: 20px;
+                margin-top: 4px; 
+        }
+        .intext{
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+           background-color: red;
+        }
+          .textfield{
+             width: 150px;
+             height: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            background-color: lightgreen;
+        }
+          .button{
+            
+            background-color: lightskyblue; 
+            margin-top: 20px;
+            margin-right: 5px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            border-radius: 28px;
+           font-family: Arial;
+           color: #fffffd;
+          font-size: 10px;
+           padding: 15px 15px 15px 15px;
+        }
+        .btn-text{
+            display: flex;
+        }
+        .button12{
+            display: flex;
+            flex-direction: row;
+           position: relative;
+           left: 140px;
+        }
+        
+        </style>
+        
+    </h:head>
+    <h:body>
+        <img src="source/image/9090909.jpg"></img>
+        <center>
+            
+            
+        <h:form>
+           
+          
+             
+                <div class="log"> 
+                
+                <div class="intext1">
+                    <div class="btn_text">
+                    <h2>LOGIN PAGE</h2> 
+                    <div> USERNAME: <h:inputText id="intext"  value="#{test.name}" class="textfield"/><br/> </div>
+                   
+                     <div> PASSWORD: <h:inputSecret id="passt" value="#{test.pwd}" class="textfield"/> <br/> </div>
+                     <div class="button1">     
+                     <div class="button12">
+                         <h:commandButton value="LOGIN" action="homepage" class="button"/>  
+                     
+                     <h:commandButton  value="MAIN" action="addpateint" class="button"/> <br/>
+                     </div>
+       
+             
+       
+                </div>
+                 </div>
+                
+                
+                  <div class="outtext"> 
+                     <div> <h:outputText value="#{test.name}"/><br/></div>
+         
+                   <div> <h:outputText value="#{test.pwd}"/><br/> </div>
+       
+             </div>
+              </div>
+                </div>
+       
+          </h:form>
+            
+            </center>
+            
+    </h:body> 
+</html>
