@@ -12,7 +12,7 @@
                 display: flex;
                 margin-right: 10px;
                 margin-left: 10px;
-                margin-top: 20px;  
+                margin-top: 30px;  
             }
                .log{
                 width: 100px;
@@ -36,7 +36,9 @@
             .title{
                 display: flex;
                 flex-basis: 85%;
-               
+               font-family: Italic;
+               font-size: 40px;
+               color: #5493db;
             }
 
             .photo{
@@ -88,12 +90,14 @@
         <div class="heade">
             <h1 class="title">WELCOME TO T,D HOSPITAL </h1>
             <div class="Button">
-                <h:commandButton value="Admin" id="login-buttton"  action="loginPage" class="button"></h:commandButton>
+                <h:commandButton value="Login" id="login-buttton"  action="addpateint" class="button"></h:commandButton>
             </div>
             <div class="Button">
-                <h:commandButton value="User" id="login_button"  action="BtnAction2" class="button"></h:commandButton>
+                <h:commandButton value="Help" id="login2_button"  action="manu_page" class="button"></h:commandButton>
             </div>  
-            
+             <div class="Button">
+                <h:commandButton value="About" id="login3_button"  action="manu_page" class="button"></h:commandButton>
+            </div>  
             
         </div>
         <div class="images">

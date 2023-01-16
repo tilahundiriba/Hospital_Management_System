@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+         body{
+                
+                background-image: Url("source/Image/woyin.jpg");
+                background-size: 100%;
+                background-position: center;
+            } 
+            .hh{
+               position: fixed;
+               left: 400px;
+                background-color: #33ff66;
+                padding:50px;
+                margin:50px; 
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+            }
+            .conntrol-textfield{
+            margin: 10px;
+              position: relative;
+            }
+            .lab{
+               
+                margin: 5px;
+            }
+            .button{
+             
+                margin: 10px;
+            }
+        </style>
+            
+    </h:head>
+    <h:body>
+        <h:form class="forms">
+           
+            <div class="hh" align="center">
+                 <div>STAFF INFORMATION</div>
+                 <div>
+            <label class="lab"> Name:</label>
+           <h:inputText id="name" class="conntrol-textfield" value="#{addStaff.name}"/>
+           </div>
+           <div>
+              <label class="lab"> Age:</label>
+           <h:inputText id="age" class="conntrol-textfield" value="#{addStaff.age}"/>
+           </div>
+           <div>
+                  <label class="lab"> Id:</label>
+           <h:inputText id="id" class="conntrol-textfield" value="#{addStaff.id}"/>
+           </div>
+           <div>
+             <label class="lab"> Gender:</label>
+           <h:inputText id="gender" class="conntrol-textfield" value="#{addStaff.gender}"/>
+           </div>
+           <div>
+             <label class="lab"> Proffession:</label>
+           <h:inputText id="proff" class="conntrol-textfield" value="#{addStaff.prof}"/>
+           </div>
+           <div>
+             <label class="lab"> Phone:</label>
+           <h:inputText id="phone" class="conntrol-textfield" value="#{addStaff.phone}"/>
+           </div>
+           <div>
+             <label class="lab"> Address:</label>
+           <h:inputText id="address" class="conntrol-textfield" value="#{addStaff.address}"/>
+           </div>
+           <div>
+             <label class="lab"> Join Date:</label>
+             <h:inputText id="jDate" class="conntrol-textfield" value="#{addStaff.date}"/>
+           </div>
+           <div class="lab">
+                         <h:commandButton value="SAVE" action="#{addStaff.addStafff()}" class="button"/>  
+                     
+                         <h:commandButton  value="CANCEL" action="addpateint" class="button"/> <br/>
+                       
+                     </div>
+                   </div>
+              <div>
+                 <a href="homepage.xhtml" target="_blank">manu_page</a>
+               </div>
+            </h:form>
+    </h:body>
+</html>

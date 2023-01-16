@@ -17,31 +17,20 @@
                 margin-right: 20px;
                 margin-left: 20px;
                 margin-top: 10px; 
-                
+            
+             top: 150px;
+             position: relative;
         }
-        fieldset{
-            background-color: greenyellow;
-              margin-right: 20px;
-                margin-left: 20px;
-                margin-top: 4px; 
-                height: 100px;   
-              margin-right: 20px;
-                margin-left: 20px;
-                margin-top: 4px; 
-        }
-        .intext{
-            margin-right: 10px;
-            margin-left: 10px;
-            margin-bottom: 10px;
-           background-color: red;
-        }
+       
+       
           .textfield{
-             width: 150px;
+             width: 200px;
              height: 20px;
             margin-right: 10px;
             margin-left: 10px;
             margin-bottom: 10px;
-            background-color: lightgreen;
+            
+          
         }
           .button{
             
@@ -58,6 +47,7 @@
         }
         .btn-text{
             display: flex;
+            background-color: lightskyblue;
         }
         .button12{
             display: flex;
@@ -65,12 +55,18 @@
            position: relative;
            left: 140px;
         }
-        
+        .plab{
+            
+            color: #000000;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 20px;
+        }
         </style>
         
     </h:head>
     <h:body>
-        <img src="source/image/9090909.jpg"></img>
+       
         <center>
             
             
@@ -82,29 +78,29 @@
                 
                 <div class="intext1">
                     <div class="btn_text">
-                    <h2>LOGIN PAGE</h2> 
-                    <div> USERNAME: <h:inputText id="intext"  value="#{test.name}" class="textfield"/><br/> </div>
+                        <h2 class="log-p">LOGIN PAGE</h2> 
+                    <div> 
+                        <label class="plab">Username:</label>
+                        <h:inputText id="intext"  value="#{test.name}" class="textfield"/><br/>
+                    </div>
                    
-                     <div> PASSWORD: <h:inputSecret id="passt" value="#{test.pwd}" class="textfield"/> <br/> </div>
+                     <div> 
+                         <label class="plab">Password:</label>
+                         <h:inputSecret id="passt" value="#{test.pwd}" class="textfield"/> <br/> 
+                     </div>
                      <div class="button1">     
                      <div class="button12">
-                         <h:commandButton value="LOGIN" action="homepage" class="button"/>  
+                         <h:commandButton value="LOGIN" action="addstaaff" class="button"/>  
                      
-                     <h:commandButton  value="MAIN" action="addpateint" class="button"/> <br/>
+                         <h:commandButton  value="MAIN" action="addpateint" class="button"/> <br/>
+                       
                      </div>
        
-             
+                        
        
                 </div>
                  </div>
                 
-                
-                  <div class="outtext"> 
-                     <div> <h:outputText value="#{test.name}"/><br/></div>
-         
-                   <div> <h:outputText value="#{test.pwd}"/><br/> </div>
-       
-             </div>
               </div>
                 </div>
        

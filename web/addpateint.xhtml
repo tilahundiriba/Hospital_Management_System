@@ -17,19 +17,55 @@
             }
              .conntrol-textfield{
                display: flex;
-               width: 150px;
-               height: 25px;
+               width: 250px;
+               height: 20px;
               margin: 5px;
+              left: 410px;
+               position: fixed;
                
              
             } 
-            .btn-control{
               
-                margin: 10px;   
+            
+            .btn-control{
+              background-color: #0b4578;
+                margin: 5px; 
+               font-family:Georgia; 
+                  color: white;
+                 
+                  border-radius: 28px;
+                       font-size: 15px;
+                       height: 35px;
+                       opacity: 0.5;
             }
-            .form-control{
+            
+              .btn-control:hover{
+              
+                background: linear-gradient(#378de5, #79bbff);
+            }
+            .box-control{
+                position: fixed;
+                left: 410px;
                  display: flex; 
               width: 80px;
+              height: 20px;
+              margin-bottom: 10px;
+            }
+            .box-control1{
+                position: fixed;
+                left: 510px;
+                 display: flex; 
+              width: 80px;
+              height: 20px;
+              margin-bottom: 10px;
+            }
+            .box-control2{
+                position: fixed;
+                left: 610px;
+                 display: flex; 
+              width: 80px;
+              height: 20px;
+              margin-bottom: 10px;
             }
             .text_label{
                  display: flex;
@@ -38,18 +74,99 @@
             .addp-control{
                 display: flex;
                 margin-right: 10px;
-              
+              position: relative;
+              left: 300px;
+              background-color: #b8e356;
+              height: 550px;
+              opacity: 0.75;
+              width: 500px;
+                border-radius: 28px;
             }
+            
             .col-sm-8{
               display: flex; 
               margin: 5px;
+              margin-top: 10px;
             }
             .btn-group-justified{
                  display: flex; 
-              margin: 10px 10px;
+              margin: 10px;
+              margin-top: 8px;
+                
             }
+            .label{
+                
+                display: flex;
+                flex-direction: column;
+              padding: 50px;
+            }
+            .lab{
+              margin: 10px;
+              display: flex;
+               left: 200px; 
+               color: black;
+            }
+            .ladtext{
+              display: flex;
+                margin: 10px;
+            }
+            .add-p{
+                font-family: Arial; 
+                 font-size: 20px;
+                color: black; 
+            }
+            .btn{
+                position: fixed;
+                left: 410px;
+            }
+            .heade{
+               
+                width: 100%;
+                 background-color: #E0BBE4;   
+             display: flex;
+              flex-basis: 85%;
+             flex-direction: row;
+             justify-content: center;
+              
+            }
+            .title{
+                 display: flex;
+                flex-basis: 85%;
+            }
+            .Button{
+                
+       
+ 
+  border-radius: 28px;
+  font-family: Arial;
+  margin-top: 30px;
+  margin-right: 20px;
+  color:#f532ff;
+  font-size: 15px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+            }
+           
         </style>
+        <h:form>
+               <div class="heade">
+            <h1 class="title">WELCOME TO USA HOSPITAL </h1>
+            <div class="Button">
+                    <h:commandButton class="btn-control" id="main_page1" value="UPDATE" action="homepage"/> 
+                 
+            </div>
+            <div class="Button">
+              
+                     <h:commandButton class="btn-control" id="main_page2" value="DELETE" action="homepage"/> 
+            </div>  
+            <div class="Button">
+             
+                     <h:commandButton class="btn-control" id="main_page3" value="HOME" action="homepage"/> 
+            </div> 
             
+            
+        </div> 
+            </h:form>
     </h:head>
     <h:body>
       
@@ -58,78 +175,69 @@
             <div class="addp-control">
                 
             <h:form>
-               <h2>ADD NEW PATEINT</h2>  
+                <h2 class="add-p"> NEW PATEINT REGISTRATION</h2>  
                 <div class="text_label">   
-         
-           First Name: <h:inputText id="firstName" class="conntrol-textfield"/><br/>
+            <label class="lab">Frist Name:</label>
+            <h:inputText id="first7Name" class="conntrol-textfield" value="#{addpateint.fName}" a:placeholder="Frist name..."/><br/>
             </div>
                 <div class="text_label">
-            
-           Last Name: <h:inputText id="lasttName" class="conntrol-textfield"/><br/>
+            <label class="lab">Last Name:</label>
+           <h:inputText id="lasttName" class="conntrol-textfield" value="#{addpateint.lName}" a:placeholder="Last name..."/><br/>
              </div>
                 <div class="text_label" style="display: flex;">
             
                  <div class="col-sm-8">
-                        Gender:<h:selectOneRadio class="btn-group-justified" value="sa">   
+                     <label class="lab">Gender:</label>
+                     <h:selectOneRadio class="btn-group-justified" value="#{addp}">   
                             
-                             <f:selectItem itemValue="Male" itemLabel="Male" />  
-                             <f:selectItem itemValue="Female" itemLabel="Female" />
+                         <f:selectItem itemValue="Male" itemLabel="Male" class="sex" value="#{addpateint.gender}"/>  
+                             <f:selectItem itemValue="Female" itemLabel="Female" class="sex"/>
                         </h:selectOneRadio>
                     
                     </div>
               </div>
-               
+                     <div class="text_label">
+              <label class="lab">Age:</label>
+            <h:inputText id="age" class="conntrol-textfield" value="#{addpateint.age}" a:placeholder="Age..."/><br/>
+              </div>
               <div class="text_label">
-             
-            ID:<h:inputText id="pid" class="conntrol-textfield"/><br/>
+             <label class="lab">ID:</label>
+           <h:inputText id="pid" class="conntrol-textfield" value="#{addpateint.id}" a:placeholder="ID..."/><br/>
                 
              </div>
                   <div class="text_label">
-              
-            Dr.Name:<h:inputText id="Dr_Name" class="conntrol-textfield"/><br/>
+              <label class="lab">Dr. Name:</label>
+            <h:inputText id="Dr_Name" class="conntrol-textfield" value="#{addpateint.dr_name}" a:placeholder="Dr.Name..."/><br/>
               </div>
                <div class="text_label">
-              
-            Blood Group:<h:inputText id="bl_group" class="conntrol-textfield"/><br/>
+              <label class="lab">Blood Group:</label>
+            <h:inputText id="bl_group" class="conntrol-textfield" value="#{addpateint.b_group}" a:placeholder="Bloogd group..."/><br/>
                </div>
                 <div class="text_label">
-                
-              Address:<h:inputText id="address" class="conntrol-textfield"/><br/>
+                <label class="lab">Address:</label>
+                  <h:inputText id="address" class="conntrol-textfield" value="#{addpateint.address}" a:placeholder="Address..."/><br/>
                  </div>
                   <div class="text_label">
-                 
-            Contact:<h:inputText id="contact" class="conntrol-textfield"/><br/>
+                 <label class="lab">Contact:</label>
+                  <h:inputText id="contact" class="conntrol-textfield" value="#{addpateint.contact}" a:placeholder="Concact..."/><br/>
                  </div>
                 <div class="text_label">
-                  <div class="col-sm-8">  
-                      <div class="col-sm-8">
-            Date: <h:selectOneMenu value="fdfdf" class="form-control" >                      	
-                        </h:selectOneMenu>
-                           </div>
-                      <div class="col-sm-8">                        
-                        <h:selectOneMenu value="ffd" class="form-control" >                         	
-                        </h:selectOneMenu>
-                          </div>
-                          <div class="col-sm-8">                   
-                        <h:selectOneMenu value="ddff" class="form-control" >                            	
-                        </h:selectOneMenu>
-                                            </div>
-                    </div>
+                   
+                      
+                      
+                      <label class="lab">Date:</label>
+                     <h:inputText id="date" class="conntrol-textfield" value="#{addpateint.date}" a:placeholder="Date..."/><br/>
+                     
+                   
                   </div>
                <div style="display: flex;" class="btn">
                    <div>
-                  <h:commandButton class="btn-control" id="add" value="ADD" action="test"/>  
+                       <h:commandButton class="btn-control" id="add" value="SAVE" action="#{addpateint.pateintInsert()}"/>  
                   </div>
-                  <div>
-                  <h:commandButton class="btn-control" id="update" value="UPDATE" action="test"/> 
-                  </div>
-                  <div>
-                  <h:commandButton class="btn-control" id="delete" value="DELETE" action="test"/>
-                  </div>
-                  <div>
-                   <h:commandButton class="btn-control" id="main_page" value="MAIN" action="homepage"/> 
+                 
                    </div>
-                   </div>
+          
+              
             </h:form>
              </div> 
          

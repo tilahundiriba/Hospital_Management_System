@@ -12,29 +12,30 @@
                 background-position: center;
             }  
                .btn-group{
-                display: flex;
+              
                 background-color: greenyellow;
-                width: 100px;
-                height: 50px;
-  
-  -webkit-border-radius: 28px;
-  -moz-border-radius: 28px;
+                width: 250px;;
+                height: 70px;
+  margin: 40px;
+
   border-radius: 28px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 10px;
-  padding: 10px 20px 10px 20px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px 30px 20px 30px;
   text-decoration: none;
       
             }
             .btn-group:hover{
                                  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none
+
+            }
+            .btngroup{
+                  display: flex;
+                  position: fixed;
+              bottom: 0px;
+               
             }
          
         </style>
@@ -42,14 +43,14 @@
     <center>
     <h:body>
       
-        <h2>WELCOME TO HOSPITAL MANAGEMENT SYSTEM</h2>
+    
         <h:form>
             <div class="btngroup">
-            <label>WELCOME TO HOSPITAL MANAGEMENT SYSTEM </label><br/> 
-            <h:commandButton class="btn-group" id="btn_forAddp" value="ADDPATEINT" action="addpateint"/> <br/>  
-           <h:commandButton class="btn-group" id="btn_forAddSt" value="ADDSTAFF" action="test"/> <br/> 
+          
+            <h:commandButton class="btn-group" id="btn_forAddp" value="PATEINT ENTITY" action="addpateint"/> <br/>  
+           <h:commandButton class="btn-group" id="btn_forAddSt" value="STAFF ENTITY" action="test"/> <br/> 
            <h:commandButton class="btn-group" id="btn_forPb" value="PAYBILL" action="test"/> <br/> 
-           <h:commandButton class="btn-group" id="btn_forExit" value="EXIT" action="test"/> <br/> 
+           <h:commandButton class="btn-group" id="btn_forExit" value="EXIT" action="homepage"/> <br/> 
            </div>
         </h:form>
     </h:body>

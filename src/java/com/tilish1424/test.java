@@ -4,6 +4,11 @@
  */
 package com.tilish1424;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 
 public class test  {
      
@@ -28,6 +33,28 @@ return pwd;
    public String diplayeName(){
        return "loginpage";
    }
+        public void pateintInsert() {
+        Statement st;
+        try {
+            
+            
+            DBConnection dbcon = new DBConnection();
+            Connection con = dbcon.get_connection();
+           st = con.createStatement();
+            String sql = "Insert into PASSWORD(PASSWORD,USERNAME)"
+                    + " values('"+pwd+"','"+name+"')";
+            st.executeQuery(sql);
+//            PreparedStatement ps = con.prepareStatement(sql);
+//            ps.setString(1, pwd);
+//            ps.setString(2, name);
+//         
+//            ps.executeUpdate();
+             System.err.println("success");
+          
+        } catch ( SQLException e) {
+             System.err.println(e);
+        }
+    }
     public test() {
     }
     
