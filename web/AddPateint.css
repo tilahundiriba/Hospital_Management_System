@@ -1,0 +1,155 @@
+*{
+    
+    padding: 0px;
+   margin: 0px;
+   font-family: sans-serif;
+}
+.btn-control{
+background-color: #0b4578;
+  margin: 5px; 
+               font-family:Georgia; 
+                  color: white;
+                 
+                  border-radius: 28px;
+                       font-size: 15px;
+                       height: 35px;
+                     width:100px;
+            }
+            
+              .btn-control:hover{
+              
+                background: linear-gradient(#378de5, #79bbff);
+            }
+                
+          body{
+                
+                background-image: Url("source/Image/woyin.jpg");
+                background-size: 100%;
+                background-position: center;
+                position: fixed;
+                
+            }
+             .conntrol-textfield{
+               display: flex;
+               width: 250px;
+               height: 30px;
+              margin: 5px;
+              left: 410px;
+               position: fixed;
+                border: none;
+            outline: none;
+            font-size: 1.1rem;
+            color: #f9004d;
+            border-radius: 10px; 
+             
+            } 
+              
+        
+            .box-control{
+                position: fixed;
+                left: 410px;
+                 display: flex; 
+              width: 80px;
+              height: 20px;
+              margin-bottom: 10px;
+            }
+            .box-control1{
+                position: fixed;
+                left: 510px;
+                 display: flex; 
+              width: 80px;
+              height: 20px;
+              margin-bottom: 10px;
+            }
+            .box-control2{
+                position: fixed;
+                left: 610px;
+                 display: flex; 
+              width: 80px;
+              height: 20px;
+              margin-bottom: 10px;
+            }
+            .text_label{
+                 display: flex;
+               
+            }
+            .addp-control{
+                display: flex;
+                margin-right: 10px;
+              position: relative;
+              top: 0px;
+              left: 300px;
+              background-color: #b8e356;
+              height: 500px;
+              opacity: 0.75;
+              width: 500px;
+                border-radius: 28px;
+            }
+            
+            .col-sm-8{
+              display: flex; 
+              margin: 5px;
+              margin-top: 10px;
+            }
+            .btn-group-justified{
+                 display: flex; 
+              margin: 10px;
+              margin-top: 8px;
+                
+            }
+            .label{
+                
+                display: flex;
+                flex-direction: column;
+              padding: 50px;
+            }
+            .lab{
+              margin: 10px;
+              display: flex;
+               left: 200px; 
+               color: black;
+            }
+            .ladtext{
+              display: flex;
+                margin: 10px;
+            }
+            .add-p{
+                font-family: Arial; 
+                 font-size: 20px;
+                color: black;
+                
+            }
+            .btn{
+                position: fixed;
+                left: 410px;
+            }
+            .heade{
+               
+                width: 270%;
+                background-color: bisque;  
+             display: flex;
+              flex-basis: 85%;
+             flex-direction: row;
+             justify-content: center;
+              
+            }
+            .title{
+                 display: flex;
+                flex-basis: 85%;
+                margin-top: 20px;
+            }
+            .Button{
+                
+       
+ 
+  border-radius: 28px;
+  font-family: Arial;
+  margin-top: 30px;
+  margin-right: 20px;
+  color:#f532ff;
+  font-size: 15px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+            }
+           
+

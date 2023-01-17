@@ -5,152 +5,15 @@
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <link rel="stylesheet" type="text/css" href="AddPateint.css"></link>
     <h:head>
         <title>ADD PATEINT</title>
-        <style>
-            
-          body{
-                
-                background-image: Url("source/Image/woyin.jpg");
-                background-size: 100%;
-                background-position: center;
-            }
-             .conntrol-textfield{
-               display: flex;
-               width: 250px;
-               height: 20px;
-              margin: 5px;
-              left: 410px;
-               position: fixed;
-               
-             
-            } 
-              
-            
-            .btn-control{
-              background-color: #0b4578;
-                margin: 5px; 
-               font-family:Georgia; 
-                  color: white;
-                 
-                  border-radius: 28px;
-                       font-size: 15px;
-                       height: 35px;
-                       opacity: 0.5;
-            }
-            
-              .btn-control:hover{
-              
-                background: linear-gradient(#378de5, #79bbff);
-            }
-            .box-control{
-                position: fixed;
-                left: 410px;
-                 display: flex; 
-              width: 80px;
-              height: 20px;
-              margin-bottom: 10px;
-            }
-            .box-control1{
-                position: fixed;
-                left: 510px;
-                 display: flex; 
-              width: 80px;
-              height: 20px;
-              margin-bottom: 10px;
-            }
-            .box-control2{
-                position: fixed;
-                left: 610px;
-                 display: flex; 
-              width: 80px;
-              height: 20px;
-              margin-bottom: 10px;
-            }
-            .text_label{
-                 display: flex;
-               
-            }
-            .addp-control{
-                display: flex;
-                margin-right: 10px;
-              position: relative;
-              left: 300px;
-              background-color: #b8e356;
-              height: 550px;
-              opacity: 0.75;
-              width: 500px;
-                border-radius: 28px;
-            }
-            
-            .col-sm-8{
-              display: flex; 
-              margin: 5px;
-              margin-top: 10px;
-            }
-            .btn-group-justified{
-                 display: flex; 
-              margin: 10px;
-              margin-top: 8px;
-                
-            }
-            .label{
-                
-                display: flex;
-                flex-direction: column;
-              padding: 50px;
-            }
-            .lab{
-              margin: 10px;
-              display: flex;
-               left: 200px; 
-               color: black;
-            }
-            .ladtext{
-              display: flex;
-                margin: 10px;
-            }
-            .add-p{
-                font-family: Arial; 
-                 font-size: 20px;
-                color: black; 
-            }
-            .btn{
-                position: fixed;
-                left: 410px;
-            }
-            .heade{
-               
-                width: 100%;
-                 background-color: #E0BBE4;   
-             display: flex;
-              flex-basis: 85%;
-             flex-direction: row;
-             justify-content: center;
-              
-            }
-            .title{
-                 display: flex;
-                flex-basis: 85%;
-            }
-            .Button{
-                
-       
- 
-  border-radius: 28px;
-  font-family: Arial;
-  margin-top: 30px;
-  margin-right: 20px;
-  color:#f532ff;
-  font-size: 15px;
-  padding: 10px 10px 10px 10px;
-  text-decoration: none;
-            }
-           
-        </style>
+        
         <h:form>
                <div class="heade">
-            <h1 class="title">WELCOME TO USA HOSPITAL </h1>
+                   <div >
+            <h2 class="add-p"> NEW PATEINT REGISTRATION</h2>
+                   </div>
             <div class="Button">
                     <h:commandButton class="btn-control" id="main_page1" value="UPDATE" action="homepage"/> 
                  
@@ -175,7 +38,7 @@
             <div class="addp-control">
                 
             <h:form>
-                <h2 class="add-p"> NEW PATEINT REGISTRATION</h2>  
+                 
                 <div class="text_label">   
             <label class="lab">Frist Name:</label>
             <h:inputText id="first7Name" class="conntrol-textfield" value="#{addpateint.fName}" a:placeholder="Frist name..."/><br/>
@@ -188,10 +51,10 @@
             
                  <div class="col-sm-8">
                      <label class="lab">Gender:</label>
-                     <h:selectOneRadio class="btn-group-justified" value="#{addp}">   
+                     <h:selectOneRadio class="btn-group-justified" value="#{addpateint.gender}">   
                             
-                         <f:selectItem itemValue="Male" itemLabel="Male" class="sex" value="#{addpateint.gender}"/>  
-                             <f:selectItem itemValue="Female" itemLabel="Female" class="sex"/>
+                         <f:selectItems class="sex"  value="#{addpateint.genderList}"/>
+                         
                         </h:selectOneRadio>
                     
                     </div>

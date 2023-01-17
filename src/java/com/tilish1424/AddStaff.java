@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -15,7 +17,23 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class AddStaff {
    public AddStaff(){
-   }
+       
+        genderList = new ArrayList<>();
+      
+        genderList.add("Male");
+        genderList.add("Female");
+        
+        
+   }    
+   List<String> genderList;
+
+    public List<String> getGenderList() {
+        return genderList;
+    }
+
+    public void setGenderList(List<String> genderList) {
+        this.genderList = genderList;
+    }
     private String name;
     private String age;
     private String id;

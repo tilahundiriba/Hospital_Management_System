@@ -18,6 +18,15 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 public class Addpateint {
+    List<String> genderList;
+
+    public List<String> getGenderList() {
+        return genderList;
+    }
+
+    public void setGenderList(List<String> genderList) {
+        this.genderList = genderList;
+    }
     private String fName;
     private String lName;
     private String age;
@@ -112,7 +121,11 @@ public class Addpateint {
     }
 public Addpateint(){
 
-       
+ genderList = new ArrayList<>();
+      
+        genderList.add("Male");
+        genderList.add("Female");
+            
        
 
 }
@@ -129,16 +142,17 @@ public Addpateint(){
 //                    + " values(?,?,?,?,?,?,?,?,?,?)";
            
            // s5.executeQuery(sql);
-           PreparedStatement ps = con.prepareStatement("Insert into ADDPATEINT(ID,FRISTNAME,LASTNAME,AGE,DR_NAME,BLOODGROUP,ADDRESS,CONTACT,DATES)values(?,?,?,?,?,?,?,?,?)");
+           PreparedStatement ps = con.prepareStatement("Insert into ADDPATEINT(ID,FRISTNAME,LASTNAME,GENDER,AGE,DR_NAME,BLOODGROUP,ADDRESS,CONTACT,DATES)values(?,?,?,?,?,?,?,?,?,?)");
             ps.setString(1, id);
             ps.setString(2, fName);
            ps.setString(3, lName);
-            ps.setString(4, age);
-           ps.setString(5, dr_name);
-              ps.setString(6, b_group);
-                ps.setString(7, address);
-                  ps.setString(8, contact);
-                    ps.setString(9, date);
+           ps.setString(4, gender);
+            ps.setString(5, age);
+           ps.setString(6, dr_name);
+              ps.setString(7, b_group);
+                ps.setString(8, address);
+                  ps.setString(9, contact);
+                    ps.setString(10, date);
                       
             ps.executeUpdate();
        

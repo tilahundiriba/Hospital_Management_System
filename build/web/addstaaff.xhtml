@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
         <style>
@@ -22,16 +23,42 @@
                 flex-direction: column;
             }
             .conntrol-textfield{
-            margin: 10px;
+               margin: 10px;
               position: relative;
+               display: flex;
+               width: 250px;
+               height: 30px;
+              margin: 5px;
+              left: 50px;
+              
+                border: none;
+            outline: none;
+            font-size: 1.1rem;
+            color: #f9004d;
+            border-radius: 10px; 
             }
             .lab{
                
-                margin: 5px;
+                margin: 10px;
             }
             .button{
-             
-                margin: 10px;
+             background-color: #0b4578;
+               margin: 5px; 
+               font-family:Georgia; 
+                  color: white;
+                 
+                  border-radius: 28px;
+                       font-size: 15px;
+                       height: 35px;
+                     width:100px;
+                margin: 5px;
+            }
+            .button:hover{
+                       background: linear-gradient(#378de5, #79bbff);
+                
+            }
+            .text_labe{
+                display: flex;
             }
         </style>
             
@@ -41,35 +68,39 @@
            
             <div class="hh" align="center">
                  <div>STAFF INFORMATION</div>
-                 <div>
+                 <div class="text_labe">
             <label class="lab"> Name:</label>
            <h:inputText id="name" class="conntrol-textfield" value="#{addStaff.name}"/>
            </div>
-           <div>
+           <div class="text_labe">
               <label class="lab"> Age:</label>
            <h:inputText id="age" class="conntrol-textfield" value="#{addStaff.age}"/>
            </div>
-           <div>
+           <div class="text_labe">
                   <label class="lab"> Id:</label>
            <h:inputText id="id" class="conntrol-textfield" value="#{addStaff.id}"/>
            </div>
-           <div>
+           <div class="text_labe">
              <label class="lab"> Gender:</label>
-           <h:inputText id="gender" class="conntrol-textfield" value="#{addStaff.gender}"/>
+                     <h:selectOneRadio class="btn-group-justified" value="#{addStaff.gender}">   
+                            
+                         <f:selectItems class="sex"  value="#{addStaff.genderList}"/>
+                         
+                        </h:selectOneRadio>
            </div>
-           <div>
+           <div class="text_labe">
              <label class="lab"> Proffession:</label>
            <h:inputText id="proff" class="conntrol-textfield" value="#{addStaff.prof}"/>
            </div>
-           <div>
+           <div class="text_labe">
              <label class="lab"> Phone:</label>
            <h:inputText id="phone" class="conntrol-textfield" value="#{addStaff.phone}"/>
            </div>
-           <div>
+           <div class="text_labe">
              <label class="lab"> Address:</label>
            <h:inputText id="address" class="conntrol-textfield" value="#{addStaff.address}"/>
            </div>
-           <div>
+           <div class="text_labe">
              <label class="lab"> Join Date:</label>
              <h:inputText id="jDate" class="conntrol-textfield" value="#{addStaff.date}"/>
            </div>
@@ -81,7 +112,9 @@
                      </div>
                    </div>
               <div>
-                 <a href="homepage.xhtml" target="_blank">manu_page</a>
+                 <a href="Homepage.xhtml" target="_blank">homepage</a>
+                 <a href="Addpateint.xhtml" target="_blank">addpateint</a>
+                 <a href="Manu_page.xhtml" target="_blank">manu_page</a>
                </div>
             </h:form>
     </h:body>
