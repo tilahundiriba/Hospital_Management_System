@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Billing Page</title>
+        <style>
+            
+            
+        </style>
+    </h:head>
+    <h:body>
+        <div class="addbill-control">
+                
+            <h:form>
+                <h3>PAYEMENT FORM</h3> 
+                <div class="bil-text_label">   
+            <label class="bil-lab">Pateint Id</label>
+            <h:inputText id="p-id" class="bill-textfield" value="" a:placeholder="Pateint Id..."/><br/>
+            </div>
+                <div class="bil-text_label">
+            <label class="bill-lab">Disease:</label>
+           <h:inputText id="Disease" class="bill-textfield" value="" a:placeholder="Disease..."/><br/>
+             </div>
+                <div class="bil-text_label" style="display: flex;">
+            
+               
+                     <label class="bill-lab">Admit Date</label>
+                     <h:inputText id="Admit-date" class="bill-textfield" value="" a:placeholder="Admit date.."/><br/>
+                    <label class="bill-lab">(DD-MM-YYYY)</label>
+                 
+                     </div>
+                     <div class="bil-text_label">
+              <label class="bill-lab">Room No.</label>
+            <h:inputText id="Room-no" class="bill-textfield" value="" a:placeholder="Room No.."/><br/>
+              </div>
+              <div class="bil-text_label"  style="display: flex;">
+             <label class="bill-lab">Discharge Date</label>
+           <h:inputText id="Discharge-date" class="bill-textfield" value="" a:placeholder="Discharge date..."/><br/>
+                 <label class="bill-lab">(DD-MM-YYYY)</label>
+             </div>
+                  <div class="bil-text_label">
+              <label class="bill-lab">Room charges:</label>
+            <h:inputText id="Room-Charge" class="bill-textfield" value="" a:placeholder="Room charge..."/><br/>
+              </div>
+               <div class="bil-text_label">
+              <label class="bill-lab">Service Charges:</label>
+            <h:inputText id="service-charge" class="bill-textfield" value="" a:placeholder="Service charge..."/><br/>
+               </div>
+                <div class="bil-text_label">
+                <label class="bill-lab">No.Of Days</label>
+                  <h:inputText id="no-days" class="bill-textfield" value="" a:placeholder="No. of days..."/><br/>
+                 </div>
+                 
+                <div class="bil-text_label">
+                   
+                      
+                      
+                      <label class="bill-lab">Total Room Charge</label>
+                     <h:inputText id="total-room-charge" class="bill-textfield" value="" a:placeholder="Total Room..."/><br/>
+                     
+                   
+                  </div>
+                 <div class="bil-text_label" style="display: flex;">
+                   
+                      
+                      
+                      <label class="bill-lab" >Billing Date</label>
+                     <h:inputText id="date" class="bill-textfield" value="" a:placeholder="Billing date..."/><br/>
+                      <label class="bill-lab">(DD-MM-YYYY)</label>
+                   
+                  </div>
+                 <div class="bil-text_label">
+                   
+                      <label class="bill-lab">Total Charges </label>
+                     <h:inputText id="total" class="bill-textfield" value="" a:placeholder="Total charge..."/><br/>
+                     
+                  </div>
+                 <div class="bil-text_label">
+                   
+                      <label class="bill-lab">Bill No.</label>
+                     <h:inputText id="bill" class="bill-textfield" value="" a:placeholder="Bill no..."/><br/>
+                     
+                  </div>
+                 <div class="bil-text_label">
+                   
+                      
+                      
+                      <label class="bill-lab">Payement Mode:</label>
+                     <h:inputText id="pay" class="bill-textfield" value="" a:placeholder="Payement..."/><br/>
+                     
+                   
+                  </div>
+               <div style="display: flex;" class="bill-button-control">
+                  
+                       <h:commandButton class="bill-button" id="add" value="SAVE" action="LoginPage"/>  
+                  
+                 
+                   </div>
+           <div>
+                 <a href="Homepage.xhtml" target="_blank">Homepage</a>
+                 <a href="Addpateint.xhtml" target="_blank">Addpateint</a>
+                 <a href="Manu_page.xhtml" target="_blank">LoginPage</a>
+               </div>
+              
+            </h:form>
+             </div> 
+    </h:body>
+</html>

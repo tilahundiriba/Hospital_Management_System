@@ -130,7 +130,7 @@ background-color: #0b4578;
              display: flex;
               flex-basis: 85%;
              flex-direction: row;
-             justify-content: center;
+         
               
             }
             .title{
@@ -151,5 +151,77 @@ background-color: #0b4578;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
             }
+            
+            
+            
+            ;style for login page
            
-
+   body{
+                
+                background-image: Url("source/Image/woyin.jpg");
+                background-size: 100%;
+                background-position: center;
+            }
+            .intext1{
+             width: 350px;
+             height: 200px;
+                margin-right: 20px;
+                margin-left: 20px;
+                margin-top: 10px; 
+            
+             top: 150px;
+             position: relative;
+        }
+       
+       
+          .textfield{
+             width: 220px;
+             height: 40px;
+            margin-right: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            color: #f9004d;
+            border-radius: 10px;
+          
+        }
+          .button{
+            
+            background-color: lightskyblue; 
+            margin-top: 20px;
+            margin-right: 5px;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            border-radius: 28px;
+           font-family: Arial;
+           height: 50px;
+           width: 100px;
+          font-size: 25px;
+        
+                 background-color: greenyellow;
+                 color: navy;
+                font-weight: bold;
+              text-decoration: none;
+           .button:hover{
+             background: #3cb0fd;  
+             }
+        }
+        .btn-text{
+            display: flex;
+            background-color: lightskyblue;
+        }
+        .button12{
+            display: flex;
+            flex-direction: row;
+           position: relative;
+           left: 140px;
+        }
+        .plab{
+            
+            color: #000000;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 20px;
+        }

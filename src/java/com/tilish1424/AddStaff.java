@@ -112,10 +112,7 @@ public class AddStaff {
            
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.get_connection();
-//            st = con.createStatement();
-//            String sql = "Insert into STAFFINFORMATION(NAME,AGE,ID,GENDER,PROFFESSION,PHONE,ADDRESS,DATES)"
-//                    + " values('"+name+"','"+age+"','"+id+"','"+gender+"','"+prof+"','"+phone+"','"+address+"','"+date+"')";
-//           st.executeQuery(sql);
+
         PreparedStatement ps = con.prepareStatement("Insert into STAFFINFORMATION(NAME,AGE,ID,GENDER,PROFFESSION,PHONE,ADDRRESS,DATES)values(?,?,?,?,?,?,?,?)");
          ps.setString(1, name);
          ps.setString(2, age);
