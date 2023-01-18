@@ -1,0 +1,21 @@
+*{
+    
+    padding: 0px;
+   margin: 0px;
+   font-family: sans-serif;
+}
+
+
+            .btn_text{
+                background-color: darkcyan;
+                margin-left: 400px;
+                display: flex;
+                flex-direction: column;
+            }
+            .textfield{
+                width: 200px;
+                  background-color: darkcyan;
+            }
+            .plab{
+                margin-bottom: 10px;
+            }

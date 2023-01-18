@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+      <link rel="stylesheet" type="text/css" href="SingUpPage.css"></link>
+    <h:head>
+        <title>Facelet Title</title>
+        
+        
+        <style>
+            .btn_text{
+                background-color: #0099ff;
+               
+                display: flex;
+                flex-direction: column;
+            }
+            .textfield{
+                width: 300px;
+                height: 40px;
+             border-radius: 20px;
+            }
+            .plab{
+                margin-bottom: 10px;
+            }
+            .form-control{
+                width: 100px;
+                height: 30px;
+            }
+            .button{
+                border-radius: 20px;
+                margin: 40px;
+                width: 200px;
+                height: 50px;
+                color: violet;
+                background: cyan;
+                font-size: 20px;
+                
+                
+            }
+        </style>
+    </h:head>
+    <h:body>
+            
+        <h:form>
+           
+          
+             
+               
+                
+              
+                    <div class="btn_text">
+                        <h2 class="log-p">SING UP</h2> 
+              
+                        <label class="plab">Frist Name</label>
+                        <h:inputText id="intextFrist"  value="#{singUpPage.fName}" class="textfield" a:placeholder="Frist name..."/><br/>
+                
+                   
+                   
+                         <label class="plab">Last Name</label>
+                        <h:inputText id="intextlast"  value="#{singUpPage.lName}" class="textfield" a:placeholder="Last name..."/><br/>
+                   
+                        
+                 
+                         <label class="plab">Email Address</label>
+                         <h:inputText id="intextEmail"  value="#{singUpPage.eMail}" class="textfield" a:placeholder="Email address..."/><br/>
+                 
+                        
+                
+                         <label class="plab">Set Password</label>
+                         <h:inputSecret id="p1" value="#{singUpPage.setPassword}" class="textfield" a:placeholder="Set password..."/> <br/> 
+               
+                      
+                         <label class="plab">Confirm Password</label>
+                         <h:inputSecret id="p2" value="#{LoginPage.pwd}" class="textfield" a:placeholder="Confirm Password..."/> <br/> 
+                          <label class="plab">Sing As</label>
+                                         
+                       <h:selectOneMenu value="#{singUpPage.userType}" class="form-control" >
+                           <f:selectItems value="#{singUpPage.singUpTypeList}" />	
+                        </h:selectOneMenu>
+               
+                     <div class="button12">
+                         <h:commandButton value="Register Now" action="LoginPage" class="button"/>  
+        
+                       
+                     </div>
+       
+                        
+       
+              
+                 </div>
+                
+          
+               
+          </h:form>
+            
+    </h:body>
+</html>

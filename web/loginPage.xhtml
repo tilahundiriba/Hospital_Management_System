@@ -94,19 +94,19 @@
                         <h2 class="log-p">LOGIN PAGE</h2> 
                     <div> 
                         <label class="plab">Username:</label>
-                        <h:inputText id="intext"  value="#{test.name}" class="textfield" a:placeholder="Last name..."/><br/>
+                        <h:inputText id="intext"  value="#{loginPage.name}" class="textfield" a:placeholder="Last name..."/><br/>
                     </div>
                    
                      <div> 
                          <label class="plab">Password:</label>
-                         <h:inputSecret id="passt" value="#{test.pwd}" class="textfield" a:placeholder="Last name..."/> <br/> 
+                         <h:inputSecret id="passt" value="#{loginPage.pwd}" class="textfield" a:placeholder="Last name..."/> <br/> 
                      </div>
                      <div class="button1">     
                      <div class="button12">
-                         <h:commandButton value="LOGIN" action="Addstaaff" class="button"/>  
+                         <h:commandButton value="LOGIN" action="#{loginPage.validateMethod()}" class="button"/>  
                      
-                         <h:commandButton  value="MAIN" action="PateintBillingPage" class="button"/> <br/>
-                       
+                         <h:commandButton  value="MAIN" action="SingUpPage.xhtml" class="button"/> <br/>
+                        <a href="SingUpPage.xhtml" target="_blank">SingUpPage</a>
                      </div>
        
                         
