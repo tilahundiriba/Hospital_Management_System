@@ -135,6 +135,7 @@ public Addpateint(){
             
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.get_connection();
+            //  Statement s5;
 //             s5 = con.createStatement();
 //           String sql = "Insert into ADDPATEINT(ID,FRISTNAME,LASTNAME,AGE,DR_NAME,BLOODGROUP,ADDRESS,CONTACT,DATES)"
 //                    + " values('"+id+"','"+fName+"','"+lName+"','"+age+"','"+dr_name+"','"+b_group+"','"+address+"','"+contact+"','"+date+"')";

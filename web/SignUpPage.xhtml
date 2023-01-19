@@ -10,23 +10,33 @@
         
         
         <style>
+              body{
+                
+                background-image: Url("source/Image/studdr.jpg");
+                background-size: 100%;
+                background-position: center;
+            }
             .btn_text{
-                background-color: #0099ff;
+           
                
                 display: flex;
                 flex-direction: column;
             }
             .textfield{
+               margin-left: 400px;
                 width: 300px;
                 height: 40px;
              border-radius: 20px;
             }
             .plab{
                 margin-bottom: 10px;
+                margin-left: 420px;
             }
             .form-control{
+                border-radius: 20px;
                 width: 100px;
                 height: 30px;
+                   margin-left: 420px;
             }
             .button{
                 border-radius: 20px;
@@ -36,8 +46,15 @@
                 color: violet;
                 background: cyan;
                 font-size: 20px;
+                   margin-left: 450px;
                 
-                
+            }
+            .log-p{
+              margin-left: 450px;  
+            }
+             .button:hover{
+            background: #3cb0fd;
+
             }
         </style>
     </h:head>
@@ -51,37 +68,34 @@
                 
               
                     <div class="btn_text">
-                        <h2 class="log-p">SING UP</h2> 
+                        <h2 class="log-p">SIGN UP</h2> 
               
                         <label class="plab">Frist Name</label>
-                        <h:inputText id="intextFrist"  value="#{singUpPage.fName}" class="textfield" a:placeholder="Frist name..."/><br/>
+                        <h:inputText id="intextFrist"  value="#{signUpPage.fName}" class="textfield" a:placeholder="Frist name..."/><br/>
                 
                    
                    
                          <label class="plab">Last Name</label>
-                        <h:inputText id="intextlast"  value="#{singUpPage.lName}" class="textfield" a:placeholder="Last name..."/><br/>
+                        <h:inputText id="intextlast"  value="#{signUpPage.lName}" class="textfield" a:placeholder="Last name..."/><br/>
                    
                         
                  
                          <label class="plab">Email Address</label>
-                         <h:inputText id="intextEmail"  value="#{singUpPage.eMail}" class="textfield" a:placeholder="Email address..."/><br/>
+                         <h:inputText id="intextEmail"  value="#{signUpPage.eMail}" class="textfield" a:placeholder="Email address..."/><br/>
                  
                         
                 
                          <label class="plab">Set Password</label>
-                         <h:inputSecret id="p1" value="#{singUpPage.setPassword}" class="textfield" a:placeholder="Set password..."/> <br/> 
+                         <h:inputSecret id="p1" value="#{signUpPage.setPassword}" class="textfield" a:placeholder="Set password..."/> <br/> 
                
                       
-                         <label class="plab">Confirm Password</label>
-                         <h:inputSecret id="p2" value="#{LoginPage.pwd}" class="textfield" a:placeholder="Confirm Password..."/> <br/> 
-                          <label class="plab">Sing As</label>
                                          
-                       <h:selectOneMenu value="#{singUpPage.userType}" class="form-control" >
-                           <f:selectItems value="#{singUpPage.singUpTypeList}" />	
+                       <h:selectOneMenu value="#{signUpPage.userType}" class="form-control" >
+                           <f:selectItems value="#{signUpPage.singUpTypeList}" />	
                         </h:selectOneMenu>
-               
+             
                      <div class="button12">
-                         <h:commandButton value="Register Now" action="LoginPage" class="button"/>  
+                         <h:commandButton value="Register Now" action="#{signUpPage.registrationMethod()}" class="button"/>  
         
                        
                      </div>

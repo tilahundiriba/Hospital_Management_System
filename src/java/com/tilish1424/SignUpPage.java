@@ -3,6 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.tilish1424;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -11,7 +15,7 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 @SessionScoped
-public class SingUpPage {
+public class SignUpPage {
   private String fName;  
    private String lName; 
     private String eMail; 
@@ -36,7 +40,7 @@ public class SingUpPage {
     }
 
    
-public SingUpPage(){
+public SignUpPage(){
   singUpTypeList = new ArrayList<>();
     singUpTypeList.add("Admin");
     singUpTypeList.add("Staff");
@@ -73,16 +77,38 @@ public SingUpPage(){
         this.setPassword = setPassword;
     }
 
-    public String getConPassword() {
-        return conPassword;
-    }
-
-    public void setConPassword(String conPassword) {
-        this.conPassword = conPassword;
-    }
-     private String conPassword; 
+//    public String getConPassword() {
+//        return conPassword;
+//   }
+//
+//   public void setConPassword(String conPassword) {
+//      this.conPassword = conPassword;
+//   }
+//    private String conPassword; 
      
-     public void singMethod(){
+     Statement s5;
+     
+     public void registrationMethod(){
+     try{
+         SignUpPage ccc = new SignUpPage();
+       DBConnection obj = new DBConnection();
+       Connection connection = obj.get_connection();
+                  
+                     s5 = connection.createStatement();
+           String sql = "Insert into LOGINVARIFY(FRIST_NAME,LASTNAME,EMAIL,PASSWORD,USERTYPE)"
+                    + " values('"+fName+"','"+lName+"','"+eMail+"','"+setPassword+"','"+userType+"')";
+            s5.executeQuery(sql);
+//     PreparedStatement pr = connection.prepareStatement("Insert into LOGINVARIFY(FRIST_NAME,LASTNAME,EMAIL,PASSWORD,USERTYPE)VALUES(?,?,?,?,?)");
+//     pr.setString(1, fName);
+//      pr.setString(2, lName);
+//         pr.setString(3, eMail);
+//           pr.setString(4, setPassword);
+//            pr.setString(5, userType);
+     }
+     catch(Exception e){
          
+         System.out.print(e);
+     }
+
      }
 }

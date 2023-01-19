@@ -69,13 +69,14 @@ return pwd;
         if (status) {
               DBConnection dbcon = new DBConnection();
             Connection con = dbcon.get_connection();
-            PreparedStatement ps = con.prepareStatement("select USERNAME from PASSWORD where USERNAME=?");
-            ps.setString(1, name);       
+            PreparedStatement ps = con.prepareStatement("select USERTYPE from LOGINVARIFY where USERTYPE=?");
+            ps.setString(1, name);   
+          
             ResultSet rs = ps.executeQuery();
             rs.next();
             String UserName =rs.getString(1);
-            if ("tilish".equals(UserName)) {
-                return "Homepage";
+            if ("Admin".equals(UserName)) {
+                return "Manu_page";
             } else {
                 return "LoginPage";
             }

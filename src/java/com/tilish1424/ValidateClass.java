@@ -14,7 +14,7 @@ public class ValidateClass {
 
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.get_connection();
-            PreparedStatement ps = con.prepareStatement("select * from PASSWORD where USERNAME=? and PASSWORD=?");
+            PreparedStatement ps = con.prepareStatement("select * from LOGINVARIFY where USERTYPE=? and PASSWORD=?");
             ps.setString(1, name);
             ps.setString(2, pass);
             ResultSet rs = ps.executeQuery();
