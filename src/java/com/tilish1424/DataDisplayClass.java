@@ -46,15 +46,15 @@ public class DataDisplayClass {
     public String getContact() {
         return contact;
     }
-    private String lName;
-    private String age;
-    private String id;
-    private String dr_name;
+    private  String lName;
+    private  String age;
+    private  String id;
+    private  String dr_name;
     private String b_group;
-    private String address;
-     private String date;
-    private String gender;
-  public String contact; 
+    private  String address;
+     private  String date;
+    private  String gender;
+  public  String contact; 
   
   
   

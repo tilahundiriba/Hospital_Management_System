@@ -26,9 +26,5 @@ public class DBConnection {
         }
         return connection;
     }
-    public static void main(String []args){
-    DBConnection obj = new DBConnection();
-   
-    System.out.println(obj.get_connection());
-    }
+    
 }

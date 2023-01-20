@@ -106,7 +106,7 @@ public class AddStaff {
     public void setDate(String date) {
         this.date = date;
     }
-    Statement st;
+  
     public void addStafff(){
           try {
            

@@ -5,88 +5,83 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
+        
+        
+        
+        
         <style>
-            
-            
-            td{
+             td{
                 margin: 20px;
                 
                 padding: 20px;
-                background-color: darkgreen;
+                background-color: brown;
             }
              
             th{
+                background-color: forestgreen;
                 margin: 20px;
-                background-color: cyan;
+                
                 padding: 20px;
             }
         </style>
-    
     </h:head>
     <h:body>
-        <p>PATEINT INFORMATION</p><BR></BR>
-        <h:dataTable id="pData" value="#{addPateint.pateintlist}" var="data" >
+        <h:dataTable id="staffTable" class="staffPage" value="#{displayStaffData2.getStaffinformation()}" var="data">
             
-            <h:column>
+              <h:column>
                 <f:facet name="header">
                     ID
                 </f:facet>
                 <h:outputText value="#{data.id}"/>  
 
             </h:column>
-             <h:column>
+              <h:column>
                 <f:facet name="header">
-                    FRIST NAME
+                    NAME
                 </f:facet>
-                <h:outputText value="#{data.fName}"/>  
+                <h:outputText value="#{data.name}"/>  
+
             </h:column>
-             <h:column>
+              <h:column>
                 <f:facet name="header">
-                    LAST NAME
+                    AGE
                 </f:facet>
-               <h:outputText value="#{data.lName}"/>  
-            </h:column>
-             <h:column>
+                <h:outputText value="#{data.age}"/>  
+
+            </h:column>  <h:column>
                 <f:facet name="header">
                     GENDER
                 </f:facet>
-               <h:outputText value="#{data.gender}"/>  
+                <h:outputText value="#{data.gender}"/>  
+
             </h:column>
-             <h:column>
+              <h:column>
                 <f:facet name="header">
-                  AGE
+                   PROFFESSION
                 </f:facet>
-                <h:outputText value="#{data.age}"/>  
+                <h:outputText value="#{data.proff}"/>  
+
             </h:column>
-             <h:column>
+              <h:column>
                 <f:facet name="header">
-                   DR.NAME
+                   PHONE
                 </f:facet>
-                <h:outputText value="#{data.dr_name}"/>  
+                <h:outputText value="#{data.phonee}"/>  
+
             </h:column>
-             <h:column>
-                <f:facet name="header">
-                   BLOOD GROUP
-                </f:facet>
-                 <h:outputText value="#{data.b_group}"/>  
-            </h:column>
-             <h:column>
+              <h:column>
                 <f:facet name="header">
                     ADDRESS
                 </f:facet>
-               <h:outputText value="#{data.address}"/>  
+                <h:outputText value="#{data.addresss}"/>  
+
             </h:column>
-             <h:column>
-                <f:facet name="header">
-                   CONTACT
-                </f:facet>
-                 <h:outputText value="#{data.contact}"/>  
-            </h:column>
-             <h:column>
+              <h:column>
                 <f:facet name="header">
                     DATE
                 </f:facet>
                 <h:outputText value="#{data.date}"/>  
+
             </h:column>
             
         </h:dataTable>
