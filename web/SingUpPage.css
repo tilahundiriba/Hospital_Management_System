@@ -1,0 +1,68 @@
+*{
+    
+    padding: 0px;
+   margin: 0px;
+   font-family: sans-serif;
+}
+
+
+     
+
+            
+            
+                 
+              body{
+                
+                background-image: Url("source/Image/studdr.jpg");
+                background-size: 100%;
+                background-position: center;
+            }
+            .btn_text{
+           
+               margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+            }
+            .textfield{
+               margin-left: 400px;
+                width: 300px;
+                height: 40px;
+             border-radius: 20px;
+            }
+            .plab{
+                margin-bottom: 10px;
+                margin-left: 420px;
+                font-family: Arial;
+                   font-size: 20px;
+                  font-weight: bold;
+                 color: cyan;
+            }
+            .form-control{
+                border-radius: 20px;
+                width: 100px;
+                height: 30px;
+                   margin-left: 420px;
+            }
+            .button{
+                border-radius: 20px;
+                margin: 40px;
+                width: 200px;
+                height: 50px;
+                color: violet;
+                background: cyan;
+                font-size: 20px;
+                   margin-left: 450px;
+                
+            }
+            .log-p{
+              margin-left: 450px;
+              font-family: Arial;
+                   font-size: 20px;
+                  font-weight: bold;
+              
+            }
+             .button:hover{
+            background: #3cb0fd;
+
+            }
+       

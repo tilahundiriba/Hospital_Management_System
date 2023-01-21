@@ -2,86 +2,32 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <link rel="stylesheet" type="text/css" href="StaffPage.css"></link>
     <h:head>
         <title>Facelet Title</title>
-        <style>
-         body{
-                
-                background-image: Url("source/Image/woyin.jpg");
-                background-size: 100%;
-                background-position: center;
-            } 
-            .hh{
-               position: fixed;
-               left: 400px;
-                background-color: #33ff66;
-                padding:50px;
-                margin:50px; 
-                width: 400px;
-                display: flex;
-                flex-direction: column;
-            }
-            .conntrol-textfield{
-               margin: 10px;
-              position: relative;
-               display: flex;
-               width: 250px;
-               height: 30px;
-              margin: 5px;
-              left: 50px;
-              
-                border: none;
-            outline: none;
-            font-size: 1.1rem;
-            color: #f9004d;
-            border-radius: 10px; 
-            }
-            .lab{
-               
-                margin: 10px;
-            }
-            .button{
-             background-color: #0b4578;
-               margin: 5px; 
-               font-family:Georgia; 
-                  color: white;
-                 
-                  border-radius: 28px;
-                       font-size: 15px;
-                       height: 35px;
-                     width:100px;
-                margin: 5px;
-            }
-            .button:hover{
-                       background: linear-gradient(#378de5, #79bbff);
-                
-            }
-            .text_labe{
-                display: flex;
-            }
-        </style>
-            
+      
     </h:head>
     <h:body>
         <h:form class="forms">
            
             <div class="hh" align="center">
-                 <div>STAFF INFORMATION</div>
+                <div class="title">ADD STAFF INFORMATION</div>
                  <div class="text_labe">
-            <label class="lab"> Name:</label>
-           <h:inputText id="name" class="conntrol-textfield" value="#{addStaff.name}"/>
+            <label class="lab"> Name</label>
+           <h:inputText id="name" class="conntrol-textfield" value="#{addStaff.name}" a:placeholder="Full name..."/>
            </div>
            <div class="text_labe">
-              <label class="lab"> Age:</label>
-           <h:inputText id="age" class="conntrol-textfield" value="#{addStaff.age}"/>
+              <label class="lab"> Age</label>
+           <h:inputText id="age" class="conntrol-textfield" value="#{addStaff.age}" a:placeholder="Age..."/>
            </div>
            <div class="text_labe">
-                  <label class="lab"> Id:</label>
-           <h:inputText id="id" class="conntrol-textfield" value="#{addStaff.id}"/>
+                  <label class="lab"> Id</label>
+           <h:inputText id="id" class="conntrol-textfield" value="#{addStaff.id}" a:placeholder="Staff Id..."/>
            </div>
            <div class="text_labe">
-             <label class="lab"> Gender:</label>
+             <label class="lab"> Gender</label>
                      <h:selectOneRadio class="btn-group-justified" value="#{addStaff.gender}">   
                             
                          <f:selectItems class="sex"  value="#{addStaff.genderList}"/>
@@ -89,32 +35,37 @@
                         </h:selectOneRadio>
            </div>
            <div class="text_labe">
-             <label class="lab"> Proffession:</label>
-           <h:inputText id="proff" class="conntrol-textfield" value="#{addStaff.prof}"/>
+             <label class="lab"> Proffession</label>
+           <h:inputText id="proff" class="conntrol-textfield" value="#{addStaff.prof}" a:placeholder="Proffession..."/>
            </div>
            <div class="text_labe">
-             <label class="lab"> Phone:</label>
-           <h:inputText id="phone" class="conntrol-textfield" value="#{addStaff.phone}"/>
+             <label class="lab"> Phone</label>
+           <h:inputText id="phone" class="conntrol-textfield" value="#{addStaff.phone}" a:placeholder="Phone..."/>
            </div>
            <div class="text_labe">
-             <label class="lab"> Address:</label>
-           <h:inputText id="address" class="conntrol-textfield" value="#{addStaff.address}"/>
+             <label class="lab"> Address</label>
+           <h:inputText id="address" class="conntrol-textfield" value="#{addStaff.address}" a:placeholder="Address..."/>
            </div>
            <div class="text_labe">
-             <label class="lab"> Join Date:</label>
-             <h:inputText id="jDate" class="conntrol-textfield" value="#{addStaff.date}"/>
+             <label class="lab"> Join Date</label>
+             <h:inputText id="jDate" class="conntrol-textfield" value="#{addStaff.date}" a:placeholder="Date..."/>
            </div>
            <div class="lab">
                          <h:commandButton value="SAVE" action="#{addStaff.addStafff()}" class="button"/>  
                      
-                         <h:commandButton  value="CANCEL" action="addpateint" class="button"/> <br/>
+                         <h:commandButton  value="CANCEL" action="addpateint" class="cancel"/> <br/>
                        
                      </div>
                    </div>
-              <div>
-                 <a href="DisPlayStaffData.xhtml" target="_blank">DisPlayStaffData</a>
-                 <a href="DeleteStaffInfoPage.xhtml" target="_blank">DeleteStaff</a>
-                 <a href="UpDateStaffInfoPage.xhtml" target="_blank">UpDateStaff</a>
+          
+            </h:form>
+        <h:form class="secondform">
+         <div class="buttonsgroup">
+               
+                 <h:commandButton  value="VIEW" action="DisPlayStaffData" class="buttons"/> <br/>
+                 <h:commandButton  value="UPDATE" action="UpDateStaffInfoPage" class="buttons2"/> <br/>
+                 <h:commandButton  value="DELETE" action="DeleteStaffInfoPage" class="buttons3"/> <br/>
+                
                </div>
             </h:form>
     </h:body>
