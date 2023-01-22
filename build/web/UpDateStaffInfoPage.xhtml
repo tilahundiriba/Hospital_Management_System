@@ -3,34 +3,85 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+   
     <h:head>
         <title>Facelet Title</title>
+        
+        
+        
+        <style>
+             body{
+                
+                background-image: Url("source/Image/scintific.jpg");
+                background-size: 160%;
+               width: 500px;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: fixed;
+            }
+            .updateStaffform{
+                position: fixed;
+                left: 400px;
+                width: 500px;
+                height: 500px;
+                background-color: burlywood;
+                border-radius: 30px;
+            }
+            .conntrol-textfield{
+                
+                position: fixed;
+                left: 530px;
+                width: 250px;
+                height: 30px;
+                border-radius: 15px;
+            }
+            .text_label{
+                padding: 20px;
+            }
+            .btn-control{
+                 background-color: green;
+                position: fixed;
+                left: 500px;
+          margin-top: 30px;
+                 width: 150px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;
+            }
+            .lab{
+                 font-family:Georgia; 
+                  color:black;
+                   font-size: 20px;
+            }
+        </style>
     </h:head>
     <h:body>
-        <h:form>
+        <h:form class="updateStaffform">
             
                  <div class="text_label">   
-            <label class="lab">Age:</label>
+            <label class="lab">Age</label>
             <h:inputText id="age" class="conntrol-textfield" value="#{upDateClass.ageOfSt}" a:placeholder="Age..."/><br/>
             </div>
            <div class="text_label">   
-            <label class="lab">Proffession:</label>
+            <label class="lab">Proffession</label>
             <h:inputText id="proffesion" class="conntrol-textfield" value="#{upDateClass.profageOfSt}" a:placeholder="proffession..."/><br/>
             </div>
            <div class="text_label">   
-            <label class="lab">Address:</label>
+            <label class="lab">Address</label>
             <h:inputText id="address" class="conntrol-textfield" value="#{upDateClass.addressageOfSt}" a:placeholder="Address..."/><br/>
             </div>
            <div class="text_label">   
-            <label class="lab">Phone:</label>
+            <label class="lab">Phone</label>
             <h:inputText id="phone" class="conntrol-textfield" value="#{upDateClass.phoneageOfSt}" a:placeholder="phone..."/><br/>
             </div>
            <div class="text_label">   
-            <label class="lab">Date:</label>
+            <label class="lab">Date</label>
             <h:inputText id="date" class="conntrol-textfield" value="#{upDateClass.dateageOfSt}" a:placeholder="Date..."/><br/>
             </div>
             <div class="text_label">   
-            <label class="lab">Id:</label>
+            <label class="lab">Id</label>
             <h:inputText id="id" class="conntrol-textfield" value="#{upDateClass.idageOfSt}" a:placeholder="Id..."/><br/>
             </div>
             

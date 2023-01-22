@@ -51,16 +51,7 @@ background-color: #0b4578;
                
             }
             .addp-control{
-                display: flex;
-                margin-right: 10px;
-              position: relative;
-              top: 0px;
-              left: 300px;
-              background-color: #b8e356;
-              height: 500px;
-              opacity: 0.75;
-              width: 500px;
-                border-radius: 28px;
+               
             }
             
             .col-sm-8{

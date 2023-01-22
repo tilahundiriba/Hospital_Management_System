@@ -5,17 +5,77 @@
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
     <h:head>
         <title>Facelet Title</title>
+        <style>
+               body{
+                
+                background-image: Url("source/Image/scintific.jpg");
+                background-size: 100%;
+            
+                position: fixed;
+            }
+            .delete{
+                background-color: darkseagreen;
+                position: fixed;
+                left: 500px;
+                width: 400px;
+                height: 200px;
+                  border-radius: 30px;
+                  top: 50px;
+            }
+            .conntrol-textfield{
+                  position: fixed;
+                left: 600px;
+                width: 250px;
+                height: 30px;
+                border-radius: 15px;
+                margin-top: 1px;
+            }
+            .btn-control{
+                   background-color: red;
+                position: fixed;
+                left: 600px;
+          margin-top: 30px;
+                 width: 150px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;
+            }
+            .text_label{
+                font-family:Georgia; 
+                  color:black;
+                   font-size: 15px;
+                   margin-top: 60px;
+            }
+            .lab{
+                margin-top: 40px;
+            }
+            .title{
+               top: 60px;
+             
+                position: fixed;
+                left: 540px;
+                 font-family:Georgia; 
+                  color:black;
+                   font-size: 15px;
+            }
+        </style>
     </h:head>
     <h:body>
          <h:form>
+             <div class="delete">
+                
+            
               <div class="text_label">
+                  <h3 class="title">Delete Staff Information using Id</h3>
                       <label class="lab">Enter Staff Id</label>
-                     <h:inputText id="date" class="conntrol-textfield" value="#{deleteClass.idOfSt}" a:placeholder="Enter Staff Id..."/><br/>
+                     <h:inputText id="date" class="conntrol-textfield" value="#{deleteClass.idOfSt}" a:placeholder="Enter Staff Id..."/>
                   </div>
                <div style="display: flex;" class="btn">
                        <h:commandButton class="btn-control" id="add" value="DELETE" action="#{deleteClass.DeleteStaffInfoMethod()}"/>
                    </div>
-            
+            </div>
             </h:form>
     </h:body>
 </html>
