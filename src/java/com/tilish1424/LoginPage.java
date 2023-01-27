@@ -36,30 +36,7 @@ return pwd;
    public String diplayeName(){
        return "loginpage";
    }
-//        public void pateintInsert() {
-//        Statement st;
-//        try {
-//            
-//            
-//            DBConnection dbcon = new DBConnection();
-//            Connection con = dbcon.get_connection();
-//           st = con.createStatement();
-//            String sql = "Insert into PASSWORD(PASSWORD,USERNAME)"
-//                    + " values('"+pwd+"','"+name+"')";
-//            st.executeQuery(sql);
-////            PreparedStatement ps = con.prepareStatement(sql);
-////            ps.setString(1, pwd);
-////            ps.setString(2, name);
-////         
-////            ps.executeUpdate();
-//             System.err.println("success");
-//          
-//        } catch ( SQLException e) {
-//             System.err.println(e);
-//        }
-//    }
-//    public test() {
-//    }
+
     
     
     
@@ -77,9 +54,12 @@ return pwd;
             String UserName =rs.getString(1);
             if ("Admin".equals(UserName)) {
                 return "Manu_page";
+            } if ("Staff".equals(UserName)) {
+                return "StaffWorkChoosePage";
             } else {
                 return "LoginPage";
             }
+            
         } else {
             FacesContext.getCurrentInstance().addMessage(
                     null,

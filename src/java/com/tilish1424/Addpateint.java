@@ -7,11 +7,8 @@ package com.tilish1424;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
@@ -29,8 +26,24 @@ public class Addpateint {
     }
     private String fName;
     private String lName;
-    private String age;
-    private String id;
+    private int age;
+    private int id;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     private String dr_name;
     private String b_group;
     private String address;
@@ -63,21 +76,7 @@ public class Addpateint {
         this.lName = lName;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+    
 
     public String getDr_name() {
         return dr_name;
@@ -130,25 +129,17 @@ public Addpateint(){
 
 }
      public void pateintInsert() {
-       //  Statement s5;
         try {
             
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.get_connection();
-            //  Statement s5;
-//             s5 = con.createStatement();
-//           String sql = "Insert into ADDPATEINT(ID,FRISTNAME,LASTNAME,AGE,DR_NAME,BLOODGROUP,ADDRESS,CONTACT,DATES)"
-//                    + " values('"+id+"','"+fName+"','"+lName+"','"+age+"','"+dr_name+"','"+b_group+"','"+address+"','"+contact+"','"+date+"')";
-//             String sql = "Insert into ADDPATEINT(ID,FRISTNAME,LASTNAME,AGE,DR_NAME,BLOODGROUP,ADDRESS,CONTACT,DATES)"
-//                    + " values(?,?,?,?,?,?,?,?,?,?)";
-           
-           // s5.executeQuery(sql);
+
            PreparedStatement ps = con.prepareStatement("Insert into ADDPATEINT(ID,FRISTNAME,LASTNAME,GENDER,AGE,DR_NAME,BLOODGROUP,ADDRESS,CONTACT,DATES)values(?,?,?,?,?,?,?,?,?,?)");
-            ps.setString(1, id);
+            ps.setInt(1, id);
             ps.setString(2, fName);
            ps.setString(3, lName);
            ps.setString(4, gender);
-            ps.setString(5, age);
+            ps.setInt(5, age);
            ps.setString(6, dr_name);
               ps.setString(7, b_group);
                 ps.setString(8, address);

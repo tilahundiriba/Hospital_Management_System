@@ -7,7 +7,6 @@ package com.tilish1424;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
@@ -35,8 +34,24 @@ public class AddStaff {
         this.genderList = genderList;
     }
     private String name;
-    private String age;
-    private String id;
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    private int id;
     private String gender;
     private String prof;
     private String phone;
@@ -51,21 +66,7 @@ public class AddStaff {
         this.name = name;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
+ 
 
     public String getGender() {
         return gender;
@@ -115,8 +116,8 @@ public class AddStaff {
 
         PreparedStatement ps = con.prepareStatement("Insert into STAFFINFORMATION(NAME,AGE,ID,GENDER,PROFFESSION,PHONE,ADDRRESS,DATES)values(?,?,?,?,?,?,?,?)");
          ps.setString(1, name);
-         ps.setString(2, age);
-        ps.setString(3, id);
+         ps.setInt(2, age);
+        ps.setInt(3, id);
         ps.setString(4, gender);
        ps.setString(5, prof);
        ps.setString(6, phone);

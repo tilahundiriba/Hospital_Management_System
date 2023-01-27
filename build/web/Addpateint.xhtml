@@ -5,10 +5,123 @@
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
-    <link rel="stylesheet" type="text/css" href="AddPateint.css"></link>
+
     <h:head>
         <title>ADD PATEINT</title>
-        
+        <style>
+                 body{
+                
+                background-image: Url("source/Image/scintific.jpg");
+                background-size: 100%;
+            
+                position: fixed;
+            }
+            .heade{
+              
+                position: fixed;
+                left: 420px;
+               bottom: 10px;
+                display: flex;
+                height: 100px;
+                flex-direction: row;
+                
+            }
+            
+            .Button{
+                margin: 30px;
+            }
+            .lab{
+               left: 400px;
+               margin: 10px;
+            }
+            .text_label{
+                margin: 20px;
+            }
+            .conntrol-textfield{
+                   border-radius: 15px;
+                width: 250px;
+                height: 25px;
+                position: fixed;
+                left: 520px;
+                margin: 10px;
+              
+                
+            }
+            .sex{
+                margin-top: 30px;
+            }
+            .addp-control{
+                background-color: yellowgreen;
+                position: fixed;
+                left: 400px;
+                top: 40px;
+                width: 500px;
+                height: 550px;
+                 border-radius: 25px;
+            }
+            
+            .btn-control{
+                     background-color: purple;
+                position: fixed;
+                left: 350px;
+          margin-top: 30px;
+                 width: 150px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;
+            }
+                 .btn-control2{
+                     background-color: red;
+                position: fixed;
+                left: 550px;
+          margin-top: 30px;
+                 width: 150px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;
+            }
+                 .btn-control3{
+                     background-color: green;
+                position: fixed;
+                left: 740px;
+          margin-top: 30px;
+                 width: 150px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;
+            }
+                 .btn-control4{
+                     background-color: green;
+                position: fixed;
+                left: 950px;
+          margin-top: 30px;
+                 width: 150px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;
+            }
+            .btn-controls{
+                          background-color: green;
+                position: fixed;
+                left: 550px;
+          margin-top: 30px;
+                 width: 150px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px; 
+                
+            }
+        </style>
         <h:form>
                <div class="heade">
             
@@ -18,15 +131,15 @@
             </div>
             <div class="Button">
               
-                     <h:commandButton class="btn-control" id="main_page2" value="DELETE" action="DeletePateintInfoPage"/> 
+                     <h:commandButton class="btn-control2" id="main_page2" value="DELETE" action="DeletePateintInfoPage"/> 
             </div>  
                     <div class="Button">
              
-                     <h:commandButton class="btn-control" id="main_page4" value="VIEW" action="DisplayPateintData"/> 
+                     <h:commandButton class="btn-control3" id="main_page4" value="VIEW" action="DisplayPateintData"/> 
             </div> 
             <div class="Button">
              
-                     <h:commandButton class="btn-control" id="main_page3" value="HOME" action="Homepage"/> 
+                     <h:commandButton class="btn-control4" id="main_page3" value="HOME" action="Addpateint"/> 
             </div> 
             
             
@@ -50,9 +163,11 @@
            <h:inputText id="lasttName" class="conntrol-textfield" value="#{addpateint.lName}" a:placeholder="Last name..."/><br/>
              </div>
                 <div class="text_label" style="display: flex;">
-            
-                 <div class="col-sm-8">
-                     <label class="lab">Gender:</label>
+             <label class="lab">Gender:</label>
+                 <div class="text_label">
+                     
+                    
+                   
                      <h:selectOneRadio class="btn-group-justified" value="#{addpateint.gender}">   
                             
                          <f:selectItems class="sex"  value="#{addpateint.genderList}"/>
@@ -97,7 +212,7 @@
                   </div>
                <div style="display: flex;" class="btn">
                    <div>
-                       <h:commandButton class="btn-control" id="add" value="SAVE" action="#{addpateint.pateintInsert()}"/>  
+                       <h:commandButton class="btn-controls" id="add" value="SAVE" action="#{addpateint.pateintInsert()}"/>  
                   </div>
                  
                    </div>

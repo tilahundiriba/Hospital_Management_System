@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+             body{
+                
+                background-image: Url("source/Image/HospitalBed.jpg");
+                background-size: 100%;
+            
+                position: fixed;
+            }
+             td{
+                margin: 20px;
+                
+                padding: 20px;
+                background-color: brown;
+            }
+             
+            th{
+                background-color: forestgreen;
+                margin: 20px;
+                
+                padding: 20px;
+            }
+        </style>
+    </h:head>
+    <h:body>
+         <h:dataTable id="billTable" class="billPage" value="#{displayPateintBill2.getbillList()}" var="bill">
+            
+              <h:column>
+                <f:facet name="header">
+                    Pateint_ID
+                </f:facet>
+                <h:outputText value="#{bill.p_id}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                    DISEASE
+                </f:facet>
+                <h:outputText value="#{bill.disease}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                    ADMIT_DATE
+                </f:facet>
+                <h:outputText value="#{bill.a_date}"/>  
+
+            </h:column>  <h:column>
+                <f:facet name="header">
+                    BILL_NO
+                </f:facet>
+                <h:outputText value="#{bill.b_no}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                   ROOM_NO
+                </f:facet>
+                <h:outputText value="#{bill.r_no}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                   DISCHARGE_DATE
+                </f:facet>
+                <h:outputText value="#{bill.d_date}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                    ROOM_CHARGE
+                </f:facet>
+                <h:outputText value="#{bill.r_charge}"/>  
+
+            </h:column>
+              <h:column>
+                <f:facet name="header">
+                    SERVICE_CHARGE
+                </f:facet>
+                <h:outputText value="#{bill.s_charge}"/>  
+
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    PAYEMENT_MODE
+                </f:facet>
+                <h:outputText value="#{bill.p_mode}"/>  
+
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    NO_OF_DAYS
+                </f:facet>
+                <h:outputText value="#{bill.n_days}"/>  
+
+            </h:column>
+            
+             <h:column>
+                <f:facet name="header">
+                    TOTAL_ROOM_CHARGE
+                </f:facet>
+                <h:outputText value="#{bill.total_r_charge}"/>  
+
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    TOTAL_CHARGE
+                </f:facet>
+                <h:outputText value="#{bill.t_charge}"/>  
+
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    BILL_DATE
+                </f:facet>
+                <h:outputText value="#{bill.b_date}"/>  
+
+            </h:column>
+       
+           
+            
+        </h:dataTable>
+    </h:body>
+</html>
