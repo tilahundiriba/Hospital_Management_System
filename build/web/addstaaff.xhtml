@@ -4,9 +4,116 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
-    <link rel="stylesheet" type="text/css" href="StaffPage.css"></link>
+   
     <h:head>
         <title>Facelet Title</title>
+        <style>
+             body{
+                
+                background-image: Url("source/Image/Corider.jpg");
+                background-size: 100%;
+                
+            } 
+            .hh{
+               position: fixed;
+               left: 400px;
+               background-color: #4aa49c;
+                padding:50px;
+                margin:50px; 
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 40px;
+            }
+            .conntrol-textfield{
+               margin: 10px;
+              position: fixed;
+                  
+               display: flex;
+               width: 250px;
+               height: 30px;
+              margin: 5px;
+             left:600px;
+              
+                border: none;
+            outline: none;
+            font-size: 1.1rem;
+            color: #f9004d;
+            border-radius: 10px; 
+            }
+            .lab{
+              font-family: Arial;
+                   font-size: 15px;
+                  font-weight: bold;
+                 color: black; 
+                margin: 10px;
+            }
+           
+            .button{
+             background-color: #0b4578;
+               margin: 5px; 
+               font-family:Georgia; 
+                  color: white;
+                 
+                  border-radius: 28px;
+                       font-size: 15px;
+                       height: 35px;
+                     width:100px;
+                margin: 5px;
+            }
+            .button:hover{
+                       background: linear-gradient(#378de5, #79bbff);
+                
+            }
+            .text_labe{
+                display: flex;
+            }
+      
+        
+            .title{
+                font-family: Arial;
+                   font-size: 25px;
+                  font-weight: bold;
+                 color: black;
+                
+            }
+            
+              .buttons4{
+                    background-color: green;
+                position: fixed;
+                left: 990px;
+               margin: 30px;
+                 width: 150px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;
+                       background-color: rgba(0,0,0,0.8);
+            }
+            .buttons4:hover{
+               background-color: green; 
+            }
+             .buttonsgroup{
+                 position: fixed;
+                 left: 980px;
+                 background-color: rosybrown;
+                 margin-top: 80px;
+               margin-bottom: 5px; 
+                display: flex;
+             flex-direction: column;
+                width: 230px;
+                height: 330px;
+             
+          border-radius: 30px;
+          background-color: rgba(0,0,0,0.3);
+            }
+            .Button{
+               
+               margin-bottom: 40px;
+            }
+         
+        </style>
       
     </h:head>
     <h:body>
@@ -53,7 +160,7 @@
            <div class="lab">
                          <h:commandButton value="SAVE" action="#{addStaff.addStafff()}" class="button"/>  
                      
-                         <h:commandButton  value="CANCEL" action="addpateint" class="cancel"/> <br/>
+                         
                        
                      </div>
                    </div>
@@ -61,10 +168,21 @@
             </h:form>
         <h:form class="secondform">
          <div class="buttonsgroup">
-               
-                 <h:commandButton  value="VIEW" action="DisPlayStaffData" class="buttons"/> <br/>
-                 <h:commandButton  value="UPDATE" action="UpDateStaffInfoPage" class="buttons2"/> <br/>
-                 <h:commandButton  value="DELETE" action="DeleteStaffInfoPage" class="buttons3"/> <br/>
+             <div class="Button">
+                 <h:commandButton  value="VIEW" action="DisPlayStaffData" class="buttons4"/> <br/>
+                 </div>
+             <div class="Button">
+                 <h:commandButton  value="UPDATE" action="UpDateStaffInfoPage" class="buttons4"/> <br/>
+                 </div>
+             <div class="Button">
+                 <h:commandButton  value="DELETE" action="DeleteStaffInfoPage" class="buttons4"/> <br/>
+                 </div>
+             <div class="Button">
+                  <h:commandButton  value="SEARCH" action="SearchSingleStaff" class="buttons4"/> <br/>
+                  </div>
+             <div class="Button">
+                  <h:commandButton  value="HOME" action="Manu_page" class="buttons4"/> <br/>
+                  </div>
                 
                </div>
             </h:form>

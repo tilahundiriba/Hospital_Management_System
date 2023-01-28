@@ -17,12 +17,12 @@
              
             }  
             .addbill-control{
-                opacity: 0.8;
+                background-color: rgba(0,0,0,0.4);
                 position: fixed;
-                left: 500px;
-                background-color: darkgoldenrod;
+                left: 400px;
+                background-color: royalblue;
                 width: 600px;
-                height: 750px;
+                height: 620px;
                 border-radius: 30px;
                 margin-top: 0px;
                 
@@ -40,20 +40,20 @@
             .bill-textfield{
                 
                 position: fixed;
-                left: 660px;
+                left: 580px;
                 width: 250px;
                 height: 25px;
                border-radius: 15px; 
             }
             .billl-lab{
                 position: fixed;
-                left: 920px;
+                left: 860px;
             }
             .bill-button{
                     background-color: green;
                 position: fixed;
-                left: 700px;
-          margin-top: 5px;
+                left: 650px;
+              margin-top: 5px;
                  width: 150px;
                 height: 40px;
                   font-family:Georgia; 
@@ -61,45 +61,35 @@
                   border-radius: 28px;
                        font-size: 15px;
             }
-            .bill-delete{
-                  background-color: red;
-                position: fixed;
-                left: 700px;
-          margin-top: 30px;
-          bottom: 5px;
+            .bill{
+                       background-color: white;
+              
+               margin: 30px;
                  width: 150px;
                 height: 40px;
                   font-family:Georgia; 
                   color: white;
                   border-radius: 28px;
-                       font-size: 15px;  
+                       font-size: 15px;
+                       background-color: rgba(0.8,0.8,0.8,0.8); 
             }
-              .bill-view{
-                  background-color: yellowgreen;
+            .bill:hover{
+                background-color: green;
+            }
+            .batnoch{
                 position: fixed;
-                left: 500px;
-                 bottom: 5px;
-          margin-top: 30px;
-                 width: 150px;
-                height: 40px;
-                  font-family:Georgia; 
-                  color: white;
-                  border-radius: 28px;
-                       font-size: 15px;  
+                
+                left: 1020px;
+                margin-top: 80px;
+                display: flex;
+                flex-direction: column;
+                background-color: yellowgreen;
+                height: 400px;
+                width: 230px;
+                 border-radius: 30px;
+                 background-color: rgba(0,0,0.4,0.8);
             }
-              .bill-home{
-                  background-color: purple;
-                position: fixed;
-                left: 900px;
-                 bottom: 5px;
-          margin-top: 30px;
-                 width: 150px;
-                height: 40px;
-                  font-family:Georgia; 
-                  color: white;
-                  border-radius: 28px;
-                       font-size: 15px;  
-            }
+           
         </style>
     </h:head>
     <h:body>
@@ -190,13 +180,24 @@
                   
                  
                    </div>
-           <div>
-                 <h:commandButton class="bill-delete" id="delete" value="DELETE" action="DeleteBillInfoPage"/>  
-                 <h:commandButton class="bill-home" id="home" value="HOME" action="PateintBillingPage"/>  
-                 <h:commandButton class="bill-view" id="view" value="VIEW" action="DisplayPateintBillPage"/>  
-               </div>
-              
+               
             </h:form>
-             </div> 
+             </div>
+        <h:form>
+         <div class="batnoch">
+             <div class="one">
+                 <h:commandButton class="bill" id="delete" value="DELETE" action="DeleteBillInfoPage"/> 
+                 </div>
+                              <div class="one">
+                 <h:commandButton class="bill" id="home" value="SEARCH" action="SearchSinglePateintBill"/> 
+                 </div>
+                              <div class="one">
+                 <h:commandButton class="bill" id="view" value="VIEW" action="DisplayPateintBillPage"/>  
+                 </div>
+                              <div class="one">
+                 <h:commandButton class="bill" id="home2" value="HOME" action="Manu_page"/>  
+                 </div>
+               </div>
+            </h:form>
     </h:body>
 </html>

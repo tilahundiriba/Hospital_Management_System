@@ -33,9 +33,9 @@
             .btn-control{
                    background-color: red;
                 position: fixed;
-                left: 600px;
+                left: 520px;
           margin-top: 30px;
-                 width: 150px;
+                 width: 100px;
                 height: 40px;
                   font-family:Georgia; 
                   color: white;
@@ -60,6 +60,18 @@
                   color:black;
                    font-size: 15px;
             }
+            .cancel{
+               background-color: red;
+                position: fixed;
+                left: 670px;
+          margin-top: 30px;
+                 width: 100px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;  
+            }
         </style>
     </h:head>
     <h:body>
@@ -74,6 +86,7 @@
                   </div>
                <div style="display: flex;" class="btn">
                        <h:commandButton class="btn-control" id="add" value="DELETE" action="#{deleteClass.DeleteStaffInfoMethod()}"/>
+                        <h:commandButton  value="CANCEL" action="Addpateint" class="cancel"/> <br/>
                    </div>
             </div>
             </h:form>

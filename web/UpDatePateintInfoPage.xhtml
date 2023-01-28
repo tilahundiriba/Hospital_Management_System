@@ -8,7 +8,32 @@
         <title>Facelet Title</title>
         <style>
          
-       
+            .cancel{
+                   background-color: red;
+                position: fixed;
+                left: 700px;
+              
+                 width: 100px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px; 
+            }
+              form{
+         background-color: darkseagreen;
+          border-radius: 40px;
+                margin-left: 400px;
+                margin-top: 50px;
+                height: 600px;
+                width: 500px;
+            opacity: 0.7px;
+            
+                
+            }
+            .conntrol-textfield{
+                width: 250px;
+            }
         </style>
     </h:head>
     <h:body>
@@ -46,6 +71,7 @@
          <div class="Button">
              
              <h:commandButton class="btn-control" id="main_page3" value="SAVE" action="#{upDateClass.upDateMethod}"/> 
+             <h:commandButton  value="CANCEL" action="Addpateint" class="cancel"/> <br/>
             </div> 
              </h:form>
     </h:body>

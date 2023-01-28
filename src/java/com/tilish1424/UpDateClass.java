@@ -168,7 +168,7 @@ public  UpDateClass(){
        DBConnection dbcon = new DBConnection();
             Connection con = dbcon.get_connection();
        
-            // String sql = "UPDATE STAFFINFORMATION SET AGE=?,PROFFESSION=?,ADDRRESS=?, PHONE=?, DATES=? WHERE ID=?";
+           
            
              PreparedStatement ps = con.prepareStatement("UPDATE STAFFINFORMATION SET AGE=?,PROFFESSION=?,ADDRRESS=?, PHONE=?, DATES=? WHERE ID=?");
           

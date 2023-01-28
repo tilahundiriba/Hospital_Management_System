@@ -6,7 +6,10 @@
     <h:head>
         <title>Facelet Title</title>
         <style>
-            
+            table {  
+           border-collapse: collapse;  
+           width: 70%;
+          }
             
             td{
                 margin: 20px;
@@ -27,11 +30,14 @@
                
                
             }
+            .title{
+                margin-left: 100px;
+            }
         </style>
     
     </h:head>
     <h:body>
-        <p>PATEINT INFORMATION</p><BR></BR>
+        <p cass="title">PATEINT INFORMATION</p><BR></BR>
         <h:dataTable id="pData" value="#{addPateint.pateintlist}" var="data" >
             
             <h:column>

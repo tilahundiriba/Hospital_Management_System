@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+              table {  
+           border-collapse: collapse;  
+           width: 70%;
+          }
+            
+            td{
+                margin: 20px;
+                
+                padding: 20px;
+                background-color: darkgreen;
+            }
+             
+            th{
+                margin: 20px;
+                background-color: cyan;
+                padding: 20px;
+            }
+               body{
+                
+                background-image: Url("source/Image/scintific.jpg");
+                background-size: 100%;
+            
+                
+            }
+            .delete{
+                background-color: darkseagreen;
+                position: fixed;
+                left: 960px;
+                width: 400px;
+                height: 200px;
+                  border-radius: 30px;
+                  top: 20px;
+            }
+            .conntrol-textfield{
+                  position: fixed;
+                left: 1050px;
+                width: 250px;
+                height: 30px;
+                border-radius: 15px;
+                margin-top: 1px;
+            }
+            .btn-control{
+                   background-color: red;
+                position: fixed;
+                left: 1050px;
+          margin-top: 30px;
+                 width: 120px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;
+            }
+            .text_label{
+                font-family:Georgia; 
+                  color:black;
+                   font-size: 15px;
+                   margin-top: 60px;
+            }
+            .lab{
+                margin-top: 40px;
+            }
+            .title{
+               top: 30px;
+             
+                position: fixed;
+                left: 980px;
+                 font-family:Georgia; 
+                  color:black;
+                   font-size: 15px;
+            }
+                  .cancel{
+                background-color: red;
+                position: fixed;
+                left: 1190px;
+          margin-top: 30px;
+                 width: 120px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;  
+            }
+        </style>
+    </h:head>
+    <h:body>
+             <h:form>
+            <div class="delete">
+              <div class="text_label">
+                   <h3 class="title">Search Pateint Information using Pateint Id.</h3>
+                      <label class="lab">Enter Id.</label>
+                     <h:inputText id="date" class="conntrol-textfield" value="#{addPateint.pateintId}" a:placeholder="Enter Pateint Id..."/><br/>
+                  </div>
+               <div style="display: flex;" class="btn">
+                       <h:commandButton class="btn-control" id="add" value="SEARCH" action="#{addPateint.getsinglelist()}"/>
+                       <h:commandButton  value="CANCEL" action="Addpateint" class="cancel"/> <br/>
+                   </div>
+            </div>
+                  <h:dataTable id="pData" value="#{addPateint.getsinglelist()}" var="data1" >
+            
+            <h:column>
+                <f:facet name="header">
+                    ID
+                </f:facet>
+                <h:outputText value="#{data1.id}"/>  
+
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    FRIST NAME
+                </f:facet>
+                <h:outputText value="#{data1.fName}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    LAST NAME
+                </f:facet>
+               <h:outputText value="#{data1.lName}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    GENDER
+                </f:facet>
+               <h:outputText value="#{data1.gender}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                  AGE
+                </f:facet>
+                <h:outputText value="#{data1.age}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                   DR.NAME
+                </f:facet>
+                <h:outputText value="#{data1.dr_name}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                   BLOOD GROUP
+                </f:facet>
+                 <h:outputText value="#{data1.b_group}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    ADDRESS
+                </f:facet>
+               <h:outputText value="#{data1.address}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                   CONTACT
+                </f:facet>
+                 <h:outputText value="#{data1.contact}"/>  
+            </h:column>
+             <h:column>
+                <f:facet name="header">
+                    DATE
+                </f:facet>
+                <h:outputText value="#{data1.date}"/>  
+            </h:column>
+            
+        </h:dataTable>
+            </h:form>
+    </h:body>
+</html>

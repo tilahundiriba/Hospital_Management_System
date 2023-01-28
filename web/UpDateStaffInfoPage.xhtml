@@ -21,7 +21,7 @@
                 position: fixed;
                 left: 400px;
                 width: 500px;
-                height: 500px;
+                height: 520px;
                 background-color: burlywood;
                 border-radius: 30px;
             }
@@ -41,7 +41,7 @@
                 position: fixed;
                 left: 500px;
           margin-top: 30px;
-                 width: 150px;
+                 width: 120px;
                 height: 40px;
                   font-family:Georgia; 
                   color: white;
@@ -53,11 +53,26 @@
                   color:black;
                    font-size: 20px;
             }
+            .title{
+                margin-left: 150px;
+            }
+            .cancel{
+                     background-color: red;
+                position: fixed;
+                left: 650px;
+          margin-top: 30px;
+                 width: 120px;
+                height: 40px;
+                  font-family:Georgia; 
+                  color: white;
+                  border-radius: 28px;
+                       font-size: 15px;
+            }
         </style>
     </h:head>
     <h:body>
         <h:form class="updateStaffform">
-            
+            <h3 class="title">Update Staff Infromation</h3>
                  <div class="text_label">   
             <label class="lab">Age</label>
             <h:inputText id="age" class="conntrol-textfield" value="#{upDateClass.ageOfSt}" a:placeholder="Age..."/><br/>
@@ -86,6 +101,7 @@
          <div class="Button">
              
              <h:commandButton class="btn-control" id="main_page3" value="SAVE" action="#{upDateClass.upDateStaffMethod()}"/> 
+             <h:commandButton  value="CANCEL" action="Addstaaff" class="cancel"/> <br/>
             </div> 
             
         </h:form>

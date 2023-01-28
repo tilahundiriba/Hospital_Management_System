@@ -24,7 +24,7 @@ public class DeleteClass {
    
    try{
      DBConnection dbcon = new DBConnection();
-            Connection con = dbcon.get_connection();
+      Connection con = dbcon.get_connection();
 
         PreparedStatement ps = con.prepareStatement("Delete from ADDPATEINT where ID=?");
          ps.setString(1, id);   

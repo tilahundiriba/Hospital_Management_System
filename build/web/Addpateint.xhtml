@@ -14,17 +14,21 @@
                 background-image: Url("source/Image/scintific.jpg");
                 background-size: 100%;
             
-                position: fixed;
+               
             }
             .heade{
               
                 position: fixed;
-                left: 420px;
-               bottom: 10px;
+                left: 600px;
+             top: 80px;
                 display: flex;
-                height: 100px;
-                flex-direction: row;
-                
+                height: 400px;
+                width: 250px;
+                flex-direction: column;
+                background-color: red;
+                left: 930px;
+                   border-radius: 30px;
+                background-color: rgba(0,0,0.4,0.8);
             }
             
             .Button{
@@ -43,64 +47,32 @@
                 height: 25px;
                 position: fixed;
                 left: 520px;
-                margin: 10px;
+               
               
                 
             }
             .sex{
-                margin-top: 30px;
+                margin-top: 10px;
             }
             .addp-control{
-                background-color: yellowgreen;
+                 background-color: rgba(0,0,0.8,0.8);
+                background-color: darkcyan;
                 position: fixed;
                 left: 400px;
                 top: 40px;
                 width: 500px;
-                height: 550px;
+                height: 560px;
                  border-radius: 25px;
             }
             
-            .btn-control{
-                     background-color: purple;
-                position: fixed;
-                left: 350px;
-          margin-top: 30px;
-                 width: 150px;
-                height: 40px;
-                  font-family:Georgia; 
-                  color: white;
-                  border-radius: 28px;
-                       font-size: 15px;
-            }
-                 .btn-control2{
-                     background-color: red;
-                position: fixed;
-                left: 550px;
-          margin-top: 30px;
-                 width: 150px;
-                height: 40px;
-                  font-family:Georgia; 
-                  color: white;
-                  border-radius: 28px;
-                       font-size: 15px;
-            }
-                 .btn-control3{
-                     background-color: green;
-                position: fixed;
-                left: 740px;
-          margin-top: 30px;
-                 width: 150px;
-                height: 40px;
-                  font-family:Georgia; 
-                  color: white;
-                  border-radius: 28px;
-                       font-size: 15px;
-            }
+           
+               
                  .btn-control4{
-                     background-color: green;
+                     background-color: rgba(0,0,0,0.7);
+                     background-color: royalblue;
                 position: fixed;
                 left: 950px;
-          margin-top: 30px;
+               margin: 30px;
                  width: 150px;
                 height: 40px;
                   font-family:Georgia; 
@@ -108,12 +80,15 @@
                   border-radius: 28px;
                        font-size: 15px;
             }
+            .btn-control4:hover{
+                 background-color: green;
+            }
             .btn-controls{
-                          background-color: green;
+                background-color: green;
                 position: fixed;
-                left: 550px;
-          margin-top: 30px;
-                 width: 150px;
+                left: 580px;
+          margin-top: 20px;
+                 width: 120px;
                 height: 40px;
                   font-family:Georgia; 
                   color: white;
@@ -121,28 +96,33 @@
                        font-size: 15px; 
                 
             }
+            .title{
+                margin-left: 150px;
+            }
+            
         </style>
         <h:form>
                <div class="heade">
             
             <div class="Button">
-                    <h:commandButton class="btn-control" id="main_page1" value="UPDATE" action="UpDatePateintInfoPage"/> 
+                    <h:commandButton class="btn-control4" id="main_page1" value="UPDATE" action="UpDatePateintInfoPage"/> 
                  
             </div>
             <div class="Button">
               
-                     <h:commandButton class="btn-control2" id="main_page2" value="DELETE" action="DeletePateintInfoPage"/> 
+                     <h:commandButton class="btn-control4" id="main_page2" value="DELETE" action="DeletePateintInfoPage"/> 
             </div>  
                     <div class="Button">
              
-                     <h:commandButton class="btn-control3" id="main_page4" value="VIEW" action="DisplayPateintData"/> 
+                     <h:commandButton class="btn-control4" id="main_page4" value="VIEW" action="DisplayPateintData"/> 
             </div> 
             <div class="Button">
              
-                     <h:commandButton class="btn-control4" id="main_page3" value="HOME" action="Addpateint"/> 
+                     <h:commandButton class="btn-control4" id="main_page3" value="SEARCH" action="SearchSinglePateint"/> 
             </div> 
-            
-            
+            <div class="Button">
+            <h:commandButton  value="HOME" action="Manu_page" class="btn-control4"/> <br/>
+            </div> 
         </div> 
             </h:form>
     </h:head>
@@ -150,10 +130,11 @@
       
       
        
-            <div class="addp-control">
+            
                 
             <h:form>
-                 
+                <div class="addp-control">
+                <h3 class="title">Add Pateiont Information</h3>
                 <div class="text_label">   
             <label class="lab">Frist Name:</label>
             <h:inputText id="first7Name" class="conntrol-textfield" value="#{addpateint.fName}" a:placeholder="Frist name..."/><br/>
@@ -213,13 +194,14 @@
                <div style="display: flex;" class="btn">
                    <div>
                        <h:commandButton class="btn-controls" id="add" value="SAVE" action="#{addpateint.pateintInsert()}"/>  
+                       
                   </div>
                  
                    </div>
           
-              
+                </div> 
             </h:form>
-             </div> 
+           
          
        
     </h:body>

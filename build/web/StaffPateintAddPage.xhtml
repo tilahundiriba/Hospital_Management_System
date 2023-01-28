@@ -15,14 +15,17 @@
                 position: fixed;
             }
             .heade{
-              
+              top: 150px;
                 position: fixed;
-                left: 420px;
+                left: 950px;
                bottom: 10px;
                 display: flex;
-                height: 100px;
-                flex-direction: row;
-                
+                width: 250px;
+                height: 330px;
+                flex-direction: column;
+                background-color: lightseagreen;
+                 background-color: rgba(0,0,0.4,0.8);
+                 border-radius: 30px;
             }
             
             .Button{
@@ -31,6 +34,7 @@
             .lab{
                left: 400px;
                margin: 10px;
+               color: white;
             }
             .text_label{
                 margin: 20px;
@@ -54,14 +58,15 @@
                 left: 400px;
                 top: 40px;
                 width: 500px;
-                height: 550px;
+                height: 580px;
                  border-radius: 25px;
+                 background-color: rgba(0,0,0.4,0.8);
             }
             
             .btn-control{
                      background-color: purple;
                 position: fixed;
-                left: 350px;
+                left: 1000px;
           margin-top: 30px;
                  width: 150px;
                 height: 40px;
@@ -69,48 +74,20 @@
                   color: white;
                   border-radius: 28px;
                        font-size: 15px;
+                       background-color: rgba(0,0,0.4,0.8);
+                       
             }
-                 .btn-control2{
-                     background-color: red;
-                position: fixed;
-                left: 550px;
-          margin-top: 30px;
-                 width: 150px;
-                height: 40px;
-                  font-family:Georgia; 
-                  color: white;
-                  border-radius: 28px;
-                       font-size: 15px;
+            .btn-control:hover{
+                 background-color: green;
             }
-                 .btn-control3{
-                     background-color: green;
-                position: fixed;
-                left: 550px;
-          margin-top: 30px;
-                 width: 150px;
-                height: 40px;
-                  font-family:Georgia; 
-                  color: white;
-                  border-radius: 28px;
-                       font-size: 15px;
-            }
-                 .btn-control4{
-                     background-color: green;
-                position: fixed;
-                left: 750px;
-          margin-top: 30px;
-                 width: 150px;
-                height: 40px;
-                  font-family:Georgia; 
-                  color: white;
-                  border-radius: 28px;
-                       font-size: 15px;
-            }
+         
+        
+        
             .btn-controls{
                           background-color: green;
                 position: fixed;
                 left: 550px;
-          margin-top: 30px;
+          margin-top: 20px;
                  width: 150px;
                 height: 40px;
                   font-family:Georgia; 
@@ -119,7 +96,12 @@
                        font-size: 15px; 
                 
             }
-            .title{margin-left: 150px;}
+            .title{margin-left: 150px;
+            color: white;
+            }
+            .sex{
+               color: white;  
+            }
         </style>
     </h:head>
     <h:body>
@@ -133,13 +115,17 @@
            
                     <div class="Button">
              
-                     <h:commandButton class="btn-control3" id="main_page4" value="VIEW" action="DisplayPateintData"/> 
+                     <h:commandButton class="btn-control" id="main_page4" value="VIEW" action="DisplayPateintData"/> 
             </div> 
             <div class="Button">
              
-                     <h:commandButton class="btn-control4" id="main_page3" value="HOME" action="Addpateint"/> 
+                     <h:commandButton class="btn-control" id="main_page3" value="SEARCH" action="SearchSinglePateint"/> 
             </div> 
             
+                      <div class="Button">
+             
+                     <h:commandButton class="btn-control" id="main_page5" value="HOME" action="StaffWorkChoosePage"/> 
+            </div> 
             
         </div> 
             </h:form>

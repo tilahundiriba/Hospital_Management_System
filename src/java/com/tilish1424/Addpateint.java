@@ -139,7 +139,13 @@ public Addpateint(){
             ps.setString(2, fName);
            ps.setString(3, lName);
            ps.setString(4, gender);
-            ps.setInt(5, age);
+           if(age > 0){
+                ps.setInt(5, age);
+           }else 
+           {
+               System.out.print(age);
+           }
+           
            ps.setString(6, dr_name);
               ps.setString(7, b_group);
                 ps.setString(8, address);

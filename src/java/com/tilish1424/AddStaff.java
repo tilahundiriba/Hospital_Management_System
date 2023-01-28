@@ -37,11 +37,18 @@ public class AddStaff {
     private int age;
 
     public int getAge() {
+        
         return age;
     }
 
     public void setAge(int age) {
+      
+        
         this.age = age;
+        
+        
+        
+       
     }
 
     public int getId() {
@@ -116,7 +123,14 @@ public class AddStaff {
 
         PreparedStatement ps = con.prepareStatement("Insert into STAFFINFORMATION(NAME,AGE,ID,GENDER,PROFFESSION,PHONE,ADDRRESS,DATES)values(?,?,?,?,?,?,?,?)");
          ps.setString(1, name);
+            if(age > 0)
+        {
          ps.setInt(2, age);
+        }
+        else{
+        System.out.print(age);
+        }
+        
         ps.setInt(3, id);
         ps.setString(4, gender);
        ps.setString(5, prof);
