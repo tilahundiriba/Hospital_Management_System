@@ -99,40 +99,40 @@
                 <h3 class="title" >PAYEMENT PATEIT BILL</h3> 
                 <div class="bil-text_label">   
             <label class="bil-lab">Pateint Id</label>
-            <h:inputText id="p-id" class="bill-textfield" value="#{billPayPage.p_id}" a:placeholder="Pateint Id..."/><br/>
+            <h:inputText id="p-id" class="bill-textfield" value="#{billPayPage.p_id}" a:placeholder="Pateint Id..." required="true"/><br/>
             </div>
                 <div class="bil-text_label">
             <label class="bill-lab">Disease:</label>
-           <h:inputText id="Disease" class="bill-textfield" value="#{billPayPage.disease}" a:placeholder="Disease..."/><br/>
+           <h:inputText id="Disease" class="bill-textfield" value="#{billPayPage.disease}" a:placeholder="Disease..." required="true"/><br/>
              </div>
                 <div class="bil-text_label" style="display: flex;">
             
                
                      <label class="bill-lab">Admit Date</label>
-                     <h:inputText id="Admit-date" class="bill-textfield" value="#{billPayPage.a_date}" a:placeholder="Admit date.."/><br/>
+                     <h:inputText id="Admit-date" class="bill-textfield" value="#{billPayPage.a_date}" a:placeholder="Admit date.." required="true"/><br/>
                     <label class="billl-lab">(DD-MM-YYYY)</label>
                  
                      </div>
                      <div class="bil-text_label">
               <label class="bill-lab">Room No.</label>
-            <h:inputText id="Room-no" class="bill-textfield" value="#{billPayPage.r_no}" a:placeholder="Room No.."/><br/>
+            <h:inputText id="Room-no" class="bill-textfield" value="#{billPayPage.r_no}" a:placeholder="Room No.." required="true"/><br/>
               </div>
               <div class="bil-text_label"  style="display: flex;">
              <label class="bill-lab">Discharge Date</label>
-           <h:inputText id="Discharge-date" class="bill-textfield" value="#{billPayPage.d_date}" a:placeholder="Discharge date..."/><br/>
+           <h:inputText id="Discharge-date" class="bill-textfield" value="#{billPayPage.d_date}" a:placeholder="Discharge date..." required="true"/><br/>
                  <label class="billl-lab">(DD-MM-YYYY)</label>
              </div>
                   <div class="bil-text_label">
               <label class="bill-lab">Room charges:</label>
-            <h:inputText id="Room-Charge" class="bill-textfield" value="#{billPayPage.r_charge}" a:placeholder="Room charge..."/><br/>
+            <h:inputText id="Room-Charge" class="bill-textfield" value="#{billPayPage.r_charge}" a:placeholder="Room charge..." required="true"/><br/>
               </div>
                <div class="bil-text_label">
               <label class="bill-lab">Service Charges:</label>
-            <h:inputText id="service-charge" class="bill-textfield" value="#{billPayPage.s_charge}" a:placeholder="Service charge..."/><br/>
+            <h:inputText id="service-charge" class="bill-textfield" value="#{billPayPage.s_charge}" a:placeholder="Service charge..." required="true"/><br/>
                </div>
                 <div class="bil-text_label">
                 <label class="bill-lab">No.Of Days</label>
-                  <h:inputText id="no-days" class="bill-textfield" value="#{billPayPage.n_days}" a:placeholder="No. of days..."/><br/>
+                  <h:inputText id="no-days" class="bill-textfield" value="#{billPayPage.n_days}" a:placeholder="No. of days..." required="true"/><br/>
                  </div>
                  
                 <div class="bil-text_label">
@@ -140,7 +140,7 @@
                       
                       
                       <label class="bill-lab">Total Room Charge</label>
-                     <h:inputText id="total-room-charge" class="bill-textfield" value="#{billPayPage.total_r_charge}" a:placeholder="Total Room..."/><br/>
+                     <h:inputText id="total-room-charge" class="bill-textfield" value="#{billPayPage.total_r_charge}" a:placeholder="Total Room..." required="true"/><br/>
                      
                    
                   </div>
@@ -149,20 +149,20 @@
                       
                       
                       <label class="bill-lab" >Billing Date</label>
-                     <h:inputText id="date" class="bill-textfield" value="#{billPayPage.b_date}" a:placeholder="Billing date..."/><br/>
+                     <h:inputText id="date" class="bill-textfield" value="#{billPayPage.b_date}" a:placeholder="Billing date..." required="true"/><br/>
                       <label class="billl-lab">(DD-MM-YYYY)</label>
                    
                   </div>
                  <div class="bil-text_label">
                    
                       <label class="bill-lab">Total Charges </label>
-                     <h:inputText id="total" class="bill-textfield" value="#{billPayPage.t_charge}" a:placeholder="Total charge..."/><br/>
+                     <h:inputText id="total" class="bill-textfield" value="#{billPayPage.t_charge}" a:placeholder="Total charge..." required="true"/><br/>
                      
                   </div>
                  <div class="bil-text_label">
                    
                       <label class="bill-lab">Bill No.</label>
-                     <h:inputText id="bill" class="bill-textfield" value="#{billPayPage.b_no}" a:placeholder="Bill no..."/><br/>
+                     <h:inputText id="bill" class="bill-textfield" value="#{billPayPage.b_no}" a:placeholder="Bill no..." required="true"/><br/>
                      
                   </div>
                  <div class="bil-text_label">
@@ -170,13 +170,13 @@
                       
                       
                       <label class="bill-lab">Payement Mode:</label>
-                     <h:inputText id="pay" class="bill-textfield" value="#{billPayPage.p_mode}" a:placeholder="Payement..."/><br/>
+                     <h:inputText id="pay" class="bill-textfield" value="#{billPayPage.p_mode}" a:placeholder="Payement..." required="true"/><br/>
                      
                    
                   </div>
                <div style="display: flex;" class="bill-button-control">
                   
-                       <h:commandButton class="bill-button" id="add" value="SAVE" action="#{billPayPage.billMothed()}"/>  
+                   <h:commandButton class="bill-button" id="add" value="SAVE" action="#{billPayPage.billMothed()}" onclick="added()"/>  
                   
                  
                    </div>
@@ -199,5 +199,11 @@
                  </div>
                </div>
             </h:form>
+         <SCRIPT for="message">
+            function added()
+            {
+              alert("Succesfully registered.");
+            }
+        </SCRIPT>
     </h:body>
 </html>

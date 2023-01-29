@@ -37,6 +37,7 @@
             .lab{
                left: 400px;
                margin: 10px;
+                color: white;
             }
             .text_label{
                 margin: 20px;
@@ -55,8 +56,8 @@
                 margin-top: 10px;
             }
             .addp-control{
-                 background-color: rgba(0,0,0.8,0.8);
-                background-color: darkcyan;
+                 background-color: rgba(0.9,0.9,0.8,0.8);
+               
                 position: fixed;
                 left: 400px;
                 top: 40px;
@@ -84,7 +85,8 @@
                  background-color: green;
             }
             .btn-controls{
-                background-color: green;
+                background-color: rgba(0,0,0,0.7);
+               
                 position: fixed;
                 left: 580px;
           margin-top: 20px;
@@ -96,8 +98,12 @@
                        font-size: 15px; 
                 
             }
+            .btn-controls:hover{
+                background-color: green;
+            }
             .title{
                 margin-left: 150px;
+                color: white;
             }
             
         </style>
@@ -137,11 +143,11 @@
                 <h3 class="title">Add Pateiont Information</h3>
                 <div class="text_label">   
             <label class="lab">Frist Name:</label>
-            <h:inputText id="first7Name" class="conntrol-textfield" value="#{addpateint.fName}" a:placeholder="Frist name..."/><br/>
+            <h:inputText id="first7Name" class="conntrol-textfield" value="#{addpateint.fName}" a:placeholder="Frist name..." required="true"/><br/>
             </div>
                 <div class="text_label">
             <label class="lab">Last Name:</label>
-           <h:inputText id="lasttName" class="conntrol-textfield" value="#{addpateint.lName}" a:placeholder="Last name..."/><br/>
+           <h:inputText id="lasttName" class="conntrol-textfield" value="#{addpateint.lName}" a:placeholder="Last name..." required="true"/><br/>
              </div>
                 <div class="text_label" style="display: flex;">
              <label class="lab">Gender:</label>
@@ -159,35 +165,35 @@
               </div>
                      <div class="text_label">
               <label class="lab">Age:</label>
-            <h:inputText id="age" class="conntrol-textfield" value="#{addpateint.age}" a:placeholder="Age..."/><br/>
+            <h:inputText id="age" class="conntrol-textfield" value="#{addpateint.age}" a:placeholder="Age..." required="true"/><br/>
               </div>
               <div class="text_label">
              <label class="lab">ID:</label>
-           <h:inputText id="pid" class="conntrol-textfield" value="#{addpateint.id}" a:placeholder="ID..."/><br/>
+           <h:inputText id="pid" class="conntrol-textfield" value="#{addpateint.id}" a:placeholder="ID..." required="true"/><br/>
                 
              </div>
                   <div class="text_label">
               <label class="lab">Dr. Name:</label>
-            <h:inputText id="Dr_Name" class="conntrol-textfield" value="#{addpateint.dr_name}" a:placeholder="Dr.Name..."/><br/>
+            <h:inputText id="Dr_Name" class="conntrol-textfield" value="#{addpateint.dr_name}" a:placeholder="Dr.Name..." required="true"/><br/>
               </div>
                <div class="text_label">
               <label class="lab">Blood Group:</label>
-            <h:inputText id="bl_group" class="conntrol-textfield" value="#{addpateint.b_group}" a:placeholder="Bloogd group..."/><br/>
+            <h:inputText id="bl_group" class="conntrol-textfield" value="#{addpateint.b_group}" a:placeholder="Bloogd group..." required="true"/><br/>
                </div>
                 <div class="text_label">
                 <label class="lab">Address:</label>
-                  <h:inputText id="address" class="conntrol-textfield" value="#{addpateint.address}" a:placeholder="Address..."/><br/>
+                  <h:inputText id="address" class="conntrol-textfield" value="#{addpateint.address}" a:placeholder="Address..." required="true"/><br/>
                  </div>
                   <div class="text_label">
                  <label class="lab">Contact:</label>
-                  <h:inputText id="contact" class="conntrol-textfield" value="#{addpateint.contact}" a:placeholder="Concact..."/><br/>
+                  <h:inputText id="contact" class="conntrol-textfield" value="#{addpateint.contact}" a:placeholder="Concact..." required="true"/><br/>
                  </div>
                 <div class="text_label">
                    
                       
                       
                       <label class="lab">Date:</label>
-                     <h:inputText id="date" class="conntrol-textfield" value="#{addpateint.date}" a:placeholder="Date..."/><br/>
+                     <h:inputText id="date" class="conntrol-textfield" value="#{addpateint.date}" a:placeholder="Date..." required="true"/><br/>
                      
                    
                   </div>
@@ -203,6 +209,6 @@
             </h:form>
            
          
-       
+      
     </h:body>
 </html>

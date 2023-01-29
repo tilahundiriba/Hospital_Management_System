@@ -6,8 +6,10 @@ package com.tilish1424;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 @ManagedBean
 @SessionScoped
@@ -30,6 +32,11 @@ public class DeleteClass {
          ps.setString(1, id);   
        
            ps.executeUpdate();
+            FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Successfully deleted",
+                            ""));
    }
    catch(Exception e){
    
@@ -89,6 +96,11 @@ public class DeleteClass {
          ps.setString(1, billNo);   
        
            ps.executeUpdate();
+            FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Successfully deleted",
+                            ""));
    }
    catch(Exception e){
    

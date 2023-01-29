@@ -79,7 +79,7 @@
                    font-size: 15px;
             }
                   .cancel{
-                background-color: red;
+                background-color: yellowgreen;
                 position: fixed;
                 left: 1160px;
           margin-top: 30px;
@@ -98,11 +98,11 @@
               <div class="text_label">
                    <h3 class="title">Search Staff Information using Pateint Id.</h3>
                       <label class="lab">Enter Id.</label>
-                     <h:inputText id="date" class="conntrol-textfield" value="#{addPateint.staffid}" a:placeholder="Enter Pateint Id..."/><br/>
+                     <h:inputText id="date" class="conntrol-textfield" value="#{addPateint.staffid}" a:placeholder="Enter Pateint Id..." required="true"/><br/>
                   </div>
                <div style="display: flex;" class="btn">
                        <h:commandButton class="btn-control" id="add" value="SEARCH" action="#{addPateint.getsinglestafflist()}"/>
-                       <h:commandButton  value="CANCEL" action="Addstaaff" class="cancel"/> <br/>
+                       <h:commandButton  value="HOME" action="Addstaaff" class="cancel"/> <br/>
                    </div>
             </div>
                   <h:dataTable id="pData" value="#{addPateint.getsinglestafflist()}" var="data1" >

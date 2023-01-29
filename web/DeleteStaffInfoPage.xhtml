@@ -61,7 +61,7 @@
                    font-size: 15px;
             }
             .cancel{
-               background-color: red;
+               background-color: yellowgreen;
                 position: fixed;
                 left: 670px;
           margin-top: 30px;
@@ -82,13 +82,25 @@
               <div class="text_label">
                   <h3 class="title">Delete Staff Information using Id</h3>
                       <label class="lab">Enter Staff Id</label>
-                     <h:inputText id="date" class="conntrol-textfield" value="#{deleteClass.idOfSt}" a:placeholder="Enter Staff Id..."/>
+                      <h:inputText id="date" class="conntrol-textfield" value="#{deleteClass.idOfSt}" a:placeholder="Enter Staff Id..." required="true"/>
                   </div>
                <div style="display: flex;" class="btn">
-                       <h:commandButton class="btn-control" id="add" value="DELETE" action="#{deleteClass.DeleteStaffInfoMethod()}"/>
-                        <h:commandButton  value="CANCEL" action="Addpateint" class="cancel"/> <br/>
+                   <h:commandButton class="btn-control" id="add" value="DELETE" action="#{deleteClass.DeleteStaffInfoMethod()}" onclick="deleted()"/>
+                        <h:commandButton  value="HOME" action="Addpateint" class="cancel"/> <br/>
                    </div>
             </div>
             </h:form>
+         <SCRIPT for="message">
+            function deleted()
+            {
+               var response = confirm('Are you sure you?');
+               
+
+                if (response)
+                     alert("Succesfully deleted.");
+                else
+                    alert("not inserted.");
+            }
+        </SCRIPT>
     </h:body>
 </html>

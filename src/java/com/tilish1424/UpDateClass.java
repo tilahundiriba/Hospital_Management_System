@@ -8,8 +8,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 @ManagedBean
 @SessionScoped
@@ -95,6 +97,11 @@ public  UpDateClass(){
                     ps.setString(6, id);
                       
             ps.executeUpdate();
+             FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Successfully updated",
+                            ""));
           
       
       }
@@ -180,6 +187,11 @@ public  UpDateClass(){
               ps.setString(6, idageOfSt);  
                       
             ps.executeUpdate();
+             FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Successfully updated",
+                            ""));
           
       
       }

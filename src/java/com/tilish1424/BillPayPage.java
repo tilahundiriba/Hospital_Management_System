@@ -4,7 +4,9 @@ package com.tilish1424;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 
 
 @ManagedBean
@@ -164,7 +166,11 @@ public String getB_date() {
               ps.setString(13, b_date);
               ps.executeUpdate();
        
-        
+        FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Successfully Inesrted",
+                            ""));
         } catch (  SQLException e) {
              System.err.println(e);
               

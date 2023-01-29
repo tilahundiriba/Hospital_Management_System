@@ -24,22 +24,22 @@
                         <h2 class="log-p">SIGN UP</h2> 
               
                         <label class="plab">Frist Name</label>
-                        <h:inputText id="intextFrist"  value="#{signUpPage.fName}" class="textfield" a:placeholder="Frist name..."/><br/>
+                        <h:inputText id="intextFrist"  value="#{signUpPage.fName}" class="textfield" a:placeholder="Frist name..." required="true"/><br/>
                 
                    
                    
                          <label class="plab">Last Name</label>
-                        <h:inputText id="intextlast"  value="#{signUpPage.lName}" class="textfield" a:placeholder="Last name..."/><br/>
+                        <h:inputText id="intextlast"  value="#{signUpPage.lName}" class="textfield" a:placeholder="Last name..." required="true"/><br/>
                    
                         
                  
                          <label class="plab">Email Address</label>
-                         <h:inputText id="intextEmail"  value="#{signUpPage.eMail}" class="textfield" a:placeholder="Email address..."/><br/>
+                         <h:inputText id="intextEmail"  value="#{signUpPage.eMail}" class="textfield" a:placeholder="Email address..." required="true"/><br/>
                  
                         
                 
                          <label class="plab">Set Password</label>
-                         <h:inputSecret id="p1" value="#{signUpPage.setPassword}" class="textfield" a:placeholder="Set password..."/> <br/> 
+                         <h:inputSecret id="p1" value="#{signUpPage.setPassword}" class="textfield" a:placeholder="Set password..." required="true"/> <br/> 
                
                       
                                          
@@ -61,6 +61,7 @@
           
                
           </h:form>
+     
             
     </h:body>
 </html>

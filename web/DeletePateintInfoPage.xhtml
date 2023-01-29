@@ -61,7 +61,7 @@
                    font-size: 15px;
             }
                   .cancel{
-                background-color: red;
+                background-color: yellowgreen;
                 position: fixed;
                 left: 720px;
           margin-top: 30px;
@@ -83,10 +83,22 @@
                      <h:inputText id="date" class="conntrol-textfield" value="#{deleteClass.id}" a:placeholder="Enter Pateint Id..."/><br/>
                   </div>
                <div style="display: flex;" class="btn">
-                       <h:commandButton class="btn-control" id="add" value="DELETE" action="#{deleteClass.DeletePateintInfoMethod()}"/>
-                       <h:commandButton  value="CANCEL" action="Addpateint" class="cancel"/> <br/>
+                   <h:commandButton class="btn-control" id="add" value="DELETE" action="#{deleteClass.DeletePateintInfoMethod()}" onclick="deleted()"/>
+                       <h:commandButton  value="HOME" action="Addpateint" class="cancel"/> <br/>
                    </div>
             </div>
             </h:form>
+         <SCRIPT for="message">
+            function deleted()
+            {
+               var response = confirm('Are you sure you?');
+               
+
+                if (response)
+                     alert("Succesfully deleted.");
+                else
+                    alert("not inserted.");
+            }
+        </SCRIPT>
     </h:body>
 </html>

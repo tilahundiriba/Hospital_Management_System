@@ -10,8 +10,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 @ManagedBean
 @SessionScoped
@@ -77,14 +79,7 @@ public SignUpPage(){
         this.setPassword = setPassword;
     }
 
-//    public String getConPassword() {
-//        return conPassword;
-//   }
-//
-//   public void setConPassword(String conPassword) {
-//      this.conPassword = conPassword;
-//   }
-//    private String conPassword; 
+ 
      
      Statement s5;
      
@@ -98,12 +93,11 @@ public SignUpPage(){
            String sql = "Insert into LOGINVARIFY(FRIST_NAME,LASTNAME,EMAIL,PASSWORD,USERTYPE)"
                     + " values('"+fName+"','"+lName+"','"+eMail+"','"+setPassword+"','"+userType+"')";
             s5.executeQuery(sql);
-//     PreparedStatement pr = connection.prepareStatement("Insert into LOGINVARIFY(FRIST_NAME,LASTNAME,EMAIL,PASSWORD,USERTYPE)VALUES(?,?,?,?,?)");
-//     pr.setString(1, fName);
-//      pr.setString(2, lName);
-//         pr.setString(3, eMail);
-//           pr.setString(4, setPassword);
-//            pr.setString(5, userType);
+  FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Successfully Registered",
+                            ""));
      }
      catch(Exception e){
          

@@ -45,34 +45,36 @@
        
            <div class="text_label">   
             <label class="lab">Age</label>
-            <h:inputText id="age" class="conntrol-textfield" value="#{upDateClass.age}" a:placeholder="Age..."/><br/>
+            <h:inputText id="age" class="conntrol-textfield" value="#{upDateClass.age}" a:placeholder="Age..." required="true"/><br/>
             </div>
            <div class="text_label">   
             <label class="lab">Dr. Name</label>
-            <h:inputText id="dr_name" class="conntrol-textfield" value="#{upDateClass.dr_name}" a:placeholder="Dr. name..."/><br/>
+            <h:inputText id="dr_name" class="conntrol-textfield" value="#{upDateClass.dr_name}" a:placeholder="Dr. name..." required="true"/><br/>
             </div>
            <div class="text_label">   
             <label class="lab">Address</label>
-            <h:inputText id="address" class="conntrol-textfield" value="#{upDateClass.address}" a:placeholder="Address..."/><br/>
+            <h:inputText id="address" class="conntrol-textfield" value="#{upDateClass.address}" a:placeholder="Address..." required="true"/><br/>
             </div>
            <div class="text_label">   
             <label class="lab">Phone</label>
-            <h:inputText id="phone" class="conntrol-textfield" value="#{upDateClass.phone}" a:placeholder="phone..."/><br/>
+            <h:inputText id="phone" class="conntrol-textfield" value="#{upDateClass.phone}" a:placeholder="phone..." required="true"/><br/>
             </div>
            <div class="text_label">   
             <label class="lab">Date</label>
-            <h:inputText id="date" class="conntrol-textfield" value="#{upDateClass.date}" a:placeholder="Date..."/><br/>
+            <h:inputText id="date" class="conntrol-textfield" value="#{upDateClass.date}" a:placeholder="Date..." required="true"/><br/>
             </div>
             <div class="text_label">   
             <label class="lab">Id</label>
-            <h:inputText id="id" class="conntrol-textfield" value="#{upDateClass.id}" a:placeholder="Id..."/><br/>
+            <h:inputText id="id" class="conntrol-textfield" value="#{upDateClass.id}" a:placeholder="Id..." required="true"/><br/>
             </div>
             
          <div class="Button">
              
-             <h:commandButton class="btn-control" id="main_page3" value="SAVE" action="#{upDateClass.upDateMethod}"/> 
+             <h:commandButton class="btn-control" id="main_page3" value="SAVE" action="#{upDateClass.upDateMethod}" /> 
              <h:commandButton  value="CANCEL" action="Addpateint" class="cancel"/> <br/>
             </div> 
              </h:form>
+       
+        
     </h:body>
 </html>

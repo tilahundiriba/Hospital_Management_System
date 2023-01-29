@@ -17,7 +17,7 @@
             .hh{
                position: fixed;
                left: 400px;
-               background-color: #4aa49c;
+             background-color: rgba(0,0,0.8,0.8);
                 padding:50px;
                 margin:50px; 
                 width: 400px;
@@ -45,7 +45,7 @@
               font-family: Arial;
                    font-size: 15px;
                   font-weight: bold;
-                 color: black; 
+                 color: white; 
                 margin: 10px;
             }
            
@@ -54,7 +54,7 @@
                margin: 5px; 
                font-family:Georgia; 
                   color: white;
-                 
+                 background-color: rgba(0,0,0,0.8);
                   border-radius: 28px;
                        font-size: 15px;
                        height: 35px;
@@ -62,7 +62,7 @@
                 margin: 5px;
             }
             .button:hover{
-                       background: linear-gradient(#378de5, #79bbff);
+                       background: green;
                 
             }
             .text_labe{
@@ -74,7 +74,7 @@
                 font-family: Arial;
                    font-size: 25px;
                   font-weight: bold;
-                 color: black;
+                 color: white;
                 
             }
             
@@ -97,7 +97,7 @@
              .buttonsgroup{
                  position: fixed;
                  left: 980px;
-                 background-color: rosybrown;
+               
                  margin-top: 80px;
                margin-bottom: 5px; 
                 display: flex;
@@ -123,15 +123,15 @@
                 <div class="title">ADD STAFF INFORMATION</div>
                  <div class="text_labe">
             <label class="lab"> Name</label>
-           <h:inputText id="name" class="conntrol-textfield" value="#{addStaff.name}" a:placeholder="Full name..."/>
+           <h:inputText id="name" class="conntrol-textfield" value="#{addStaff.name}" a:placeholder="Full name..." required="true"/>
            </div>
            <div class="text_labe">
               <label class="lab"> Age</label>
-           <h:inputText id="age" class="conntrol-textfield" value="#{addStaff.age}" a:placeholder="Age..."/>
+           <h:inputText id="age" class="conntrol-textfield" value="#{addStaff.age}" a:placeholder="Age..." required="true"/>
            </div>
            <div class="text_labe">
                   <label class="lab"> Id</label>
-           <h:inputText id="id" class="conntrol-textfield" value="#{addStaff.id}" a:placeholder="Staff Id..."/>
+           <h:inputText id="id" class="conntrol-textfield" value="#{addStaff.id}" a:placeholder="Staff Id..." required="true"/>
            </div>
            <div class="text_labe">
              <label class="lab"> Gender</label>
@@ -143,11 +143,11 @@
            </div>
            <div class="text_labe">
              <label class="lab"> Proffession</label>
-           <h:inputText id="proff" class="conntrol-textfield" value="#{addStaff.prof}" a:placeholder="Proffession..."/>
+           <h:inputText id="proff" class="conntrol-textfield" value="#{addStaff.prof}" a:placeholder="Proffession..." required="true"/>
            </div>
            <div class="text_labe">
              <label class="lab"> Phone</label>
-           <h:inputText id="phone" class="conntrol-textfield" value="#{addStaff.phone}" a:placeholder="Phone..."/>
+           <h:inputText id="phone" class="conntrol-textfield" value="#{addStaff.phone}" a:placeholder="Phone..." required="true"/>
            </div>
            <div class="text_labe">
              <label class="lab"> Address</label>
@@ -155,10 +155,10 @@
            </div>
            <div class="text_labe">
              <label class="lab"> Join Date</label>
-             <h:inputText id="jDate" class="conntrol-textfield" value="#{addStaff.date}" a:placeholder="Date..."/>
+             <h:inputText id="jDate" class="conntrol-textfield" value="#{addStaff.date}" a:placeholder="Date..." required="true"/>
            </div>
            <div class="lab">
-                         <h:commandButton value="SAVE" action="#{addStaff.addStafff()}" class="button"/>  
+               <h:commandButton value="SAVE" action="#{addStaff.addStafff()}" class="button" />  
                      
                          
                        
@@ -186,5 +186,11 @@
                 
                </div>
             </h:form>
+         <SCRIPT for="message">
+            function added()
+            {
+              alert("Succesfully registered.");
+            }
+        </SCRIPT>
     </h:body>
 </html>

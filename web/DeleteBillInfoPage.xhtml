@@ -72,12 +72,25 @@
               <div class="text_label">
                   <h3 class="title">Delete Pateintbill Information using Bill No.</h3>
                       <label class="lab">Enter Bill No.</label>
-                     <h:inputText id="bill" class="conntrol-textfield" value="#{deleteClass.billNo}" a:placeholder="Enter Bill No..."/><br/>
+                      <h:inputText id="bill" class="conntrol-textfield" value="#{deleteClass.billNo}" a:placeholder="Enter Bill No..." required="true"/><br/>
                   </div>
                <div style="display: flex;" class="btn">
-                       <h:commandButton class="btn-control" id="add" value="DELETE" action="#{deleteClass.DeleteBillInfoMethod()}"/>
+                   <h:commandButton class="btn-control" id="add" value="DELETE" action="#{deleteClass.DeleteBillInfoMethod()}" onclick="deleted()"/>
                    </div>
             </div>
             </h:form>
+        <SCRIPT for="message">
+            function deleted()
+            {
+                var response = confirm('Are you sure you?');
+               
+
+                if (response)
+                     alert("Succesfully deleted.");
+                else
+                    alert("not inserted.");
+              
+            }
+        </SCRIPT>
     </h:body>
 </html>

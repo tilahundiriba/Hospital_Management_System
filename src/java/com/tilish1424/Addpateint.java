@@ -9,8 +9,10 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 @ManagedBean
 @SessionScoped
@@ -143,7 +145,11 @@ public Addpateint(){
                 ps.setInt(5, age);
            }else 
            {
-               System.out.print(age);
+               FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Age can't be Zero!!!",
+                            ""));
            }
            
            ps.setString(6, dr_name);
@@ -154,7 +160,11 @@ public Addpateint(){
                       
             ps.executeUpdate();
        
-             System.err.println("success");
+               FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Successfully Inesrted",
+                            ""));
           
         } catch (  SQLException e) {
              System.err.println(e);
