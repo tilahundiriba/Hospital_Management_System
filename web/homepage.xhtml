@@ -6,6 +6,11 @@
          
        
         <style>
+            body{
+                background-image: Url("source/Image/whatWoffer.jpg");
+                background-size: 100%;
+               
+            }
             .Button{
                 width: 150px;
                 height: 50px;
@@ -26,7 +31,7 @@
             }
             .heade
             {
-             background-color: #E0BBE4;   
+            
              display: flex;
              flex-direction: row;
              justify-content: center;
@@ -34,11 +39,12 @@
 
             }
             .title{
+                margin-top: 50px;
                 display: flex;
                 flex-basis: 85%;
-               font-family: Italic;
-               font-size: 40px;
-               color: #5493db;
+              font-family:Georgia; 
+               font-size: 30px;
+               color: black;
             }
 
             .photo{
@@ -87,7 +93,7 @@ width: 150px;
     <h:body>
         <h:form>
         <div class="heade">
-            <h3 class="title">WELCOME TO HOSPITAL MANAGEMENT</h3>
+            <h3 class="title">WELCOME TO HOSPITAL MANAGEMENT SYSTEM</h3>
             <div class="Button">
                 <h:commandButton value="Login" id="login-buttton"  action="LoginPage" class="button"></h:commandButton>
             </div>
@@ -95,7 +101,7 @@ width: 150px;
                 <h:commandButton value="SignUp" id="login2_button"  action="SignUpPage" class="button"></h:commandButton>
             </div>  
              <div class="Button">
-                <h:commandButton value="Help" id="login3_button"  action="Addstaaff" class="button"></h:commandButton>
+                <h:commandButton value="Help" id="login3_button"  action="HelpPage" class="button"></h:commandButton>
             </div>  
             
         </div>

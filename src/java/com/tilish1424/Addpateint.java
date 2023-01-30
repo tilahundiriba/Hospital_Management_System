@@ -141,14 +141,14 @@ public Addpateint(){
             ps.setString(2, fName);
            ps.setString(3, lName);
            ps.setString(4, gender);
-           if(age > 0){
+           if(age > 0 && age < 180){
                 ps.setInt(5, age);
            }else 
            {
                FacesContext.getCurrentInstance().addMessage(
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
-                            "Age can't be Zero!!!",
+                            "Age can't be Zero/above 180!!!",
                             ""));
            }
            

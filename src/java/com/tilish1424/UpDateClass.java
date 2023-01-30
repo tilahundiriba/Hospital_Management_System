@@ -6,7 +6,7 @@ package com.tilish1424;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
@@ -28,14 +28,7 @@ public  UpDateClass(){
         this.phone = phone;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
+ 
     public String getDr_name() {
         return dr_name;
     }
@@ -60,7 +53,15 @@ public  UpDateClass(){
         this.date = date;
     }
   
-    private String age;
+    private int age;
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     private String dr_name;
    
@@ -87,8 +88,19 @@ public  UpDateClass(){
           String sql = "UPDATE ADDPATEINT SET AGE=?, DR_NAME=?, ADDRESS=?, CONTACT=?, DATES=? WHERE ID=?";
            
              PreparedStatement ps = con.prepareStatement(sql);
-          
-            ps.setString(1, age);
+         
+            if(age > 0 && age < 180)
+        {
+         ps.setInt(1, age);
+        }
+        else{
+       FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Age can't be Zero/Above 180!!!",
+                            ""));
+        }
+         
            ps.setString(2, dr_name);
           
                 ps.setString(3, address);
@@ -115,13 +127,6 @@ public  UpDateClass(){
        
   }
 
-    public String getAgeOfSt() {
-        return ageOfSt;
-    }
-
-    public void setAgeOfSt(String ageOfSt) {
-        this.ageOfSt = ageOfSt;
-    }
 
     public String getIdageOfSt() {
         return idageOfSt;
@@ -161,7 +166,15 @@ public  UpDateClass(){
     public void setDateageOfSt(String dateageOfSt) {
         this.dateageOfSt = dateageOfSt;
     }
-   private String ageOfSt;
+   private int ageOfSt;
+
+    public int getAgeOfSt() {
+        return ageOfSt;
+    }
+
+    public void setAgeOfSt(int ageOfSt) {
+        this.ageOfSt = ageOfSt;
+    }
     private String idageOfSt;
     private String profageOfSt;
     private String phoneageOfSt;
@@ -178,8 +191,18 @@ public  UpDateClass(){
            
            
              PreparedStatement ps = con.prepareStatement("UPDATE STAFFINFORMATION SET AGE=?,PROFFESSION=?,ADDRRESS=?, PHONE=?, DATES=? WHERE ID=?");
-          
-            ps.setString(1, ageOfSt);
+                 if(age > 0&& age < 180)
+        {
+         ps.setInt(1, ageOfSt);
+        }
+        else{
+       FacesContext.getCurrentInstance().addMessage(
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Age can't be Zero/Above 180!!!",
+                            ""));
+        }
+            
             ps.setString(2, profageOfSt);
             ps.setString(3, addressageOfSt);
              ps.setString(4, phoneageOfSt);

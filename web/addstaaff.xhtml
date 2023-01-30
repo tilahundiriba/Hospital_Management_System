@@ -127,7 +127,7 @@
            </div>
            <div class="text_labe">
               <label class="lab"> Age</label>
-           <h:inputText id="age" class="conntrol-textfield" value="#{addStaff.age}" a:placeholder="Age..." required="true"/>
+              <h:inputText id="age" class="conntrol-textfield" value="#{addStaff.age}" a:placeholder="Age..." required="true" maxlength="3"/>
            </div>
            <div class="text_labe">
                   <label class="lab"> Id</label>
@@ -135,7 +135,7 @@
            </div>
            <div class="text_labe">
              <label class="lab"> Gender</label>
-                     <h:selectOneRadio class="btn-group-justified" value="#{addStaff.gender}">   
+                     <h:selectOneRadio class="btn-group-justified" value="#{addStaff.gender}" required="true" requiredMessage="Age must be selected">   
                             
                          <f:selectItems class="sex"  value="#{addStaff.genderList}"/>
                          
@@ -186,11 +186,6 @@
                 
                </div>
             </h:form>
-         <SCRIPT for="message">
-            function added()
-            {
-              alert("Succesfully registered.");
-            }
-        </SCRIPT>
+      
     </h:body>
 </html>

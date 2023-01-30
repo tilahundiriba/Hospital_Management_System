@@ -125,7 +125,7 @@ public class AddStaff {
 
         PreparedStatement ps = con.prepareStatement("Insert into STAFFINFORMATION(NAME,AGE,ID,GENDER,PROFFESSION,PHONE,ADDRRESS,DATES)values(?,?,?,?,?,?,?,?)");
          ps.setString(1, name);
-            if(age > 0)
+            if(age > 0 && age < 180)
         {
          ps.setInt(2, age);
         }
@@ -133,7 +133,7 @@ public class AddStaff {
        FacesContext.getCurrentInstance().addMessage(
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
-                            "Age can't be Zero!!!",
+                            "Age can't be Zero/above 180!!!",
                             ""));
         }
         

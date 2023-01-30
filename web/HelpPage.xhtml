@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <style>
+        
+              body{
+                
+                background-image: Url("source/Image/imojidocters.jpg");
+                background-size: 100%;
+            
+             
+            }
+        .paragraph{
+            color:salmon;
+          font-family:Georgia; 
+          font-size: 25px;
+            width: 400px;
+            height: 400px;
+            margin-left: 50px;
+            margin-top: 30px;
+            
+        }
+        .grapg{
+             width: 500px;
+                     height: 500px;
+                     background-color: yellowgreen;
+                      background-color: rgba(0,0,0.4,0.8);
+                      border-radius: 50px;
+                      margin-left: 400px;
+        }
+        .homebutton{
+            width: 200px;
+            height: 40px;
+            background-color: hotpink;
+            font-family:Georgia; 
+            color: white;
+            margin-left: 1100px;
+            margin-top: 0px;
+            border-radius: 20px;
+        }
+    </style>
+    <h:body>
+         
+        <h:form>
+            <h:commandButton class="homebutton"  action="Homepage" value="BACK HOME"></h:commandButton>
+        <div class="grapg">
+        <p class="paragraph"> ->WELLCOME TO HOSPITAL MANAGEMENT SYSTEM. 
+            This is to give you  information  how to Sign up. 
+            Frist enter your frist and last name.
+            Second enter your email address.
+            Thrid enter your password and don't forget make it strongest.
+            Fourth choose your type wich means if you are staff worker select staff.
+            if your are Admin/manager select Admin. 
+            After you finish registeration here back to home and click login button.
+            Then in place of username enter your type(Staff or Admin)don't forget to make the first latter capital.
+            
+        </p>
+           
+            </div>
+            </h:form>
+    </h:body>
+</html>
