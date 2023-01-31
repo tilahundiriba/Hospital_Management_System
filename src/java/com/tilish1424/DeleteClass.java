@@ -19,10 +19,10 @@ public class DeleteClass {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(String id) { 
         this.id = id;
     }
-   public void DeletePateintInfoMethod(){
+   public void DeletePateintInfoMethod(){ //starting method for deleting pateint information
    
    try{
      DBConnection dbcon = new DBConnection();
@@ -32,7 +32,7 @@ public class DeleteClass {
          ps.setString(1, id);   
        
            ps.executeUpdate();
-            FacesContext.getCurrentInstance().addMessage(
+            FacesContext.getCurrentInstance().addMessage( //giving information  wether deletion successefull or not.
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
                             "Successfully deleted",
@@ -43,7 +43,7 @@ public class DeleteClass {
    System.out.print(e);
    }
    
-   }
+   } // ending of method for deletion of pateint information
    
    
      private String idOfSt;
@@ -56,7 +56,7 @@ public class DeleteClass {
         this.idOfSt = idOfSt;
     }
     
-    public void DeleteStaffInfoMethod(){
+    public void DeleteStaffInfoMethod(){ //starting method for deleting staff information
     
     
       try{
@@ -67,13 +67,18 @@ public class DeleteClass {
          ps.setString(1, idOfSt);   
        
            ps.executeUpdate();
+              FacesContext.getCurrentInstance().addMessage( //giving information  wether deletion successefull or not.
+                    null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                            "Successfully deleted",
+                            ""));
    }
    catch(Exception e){
    
    System.out.print(e);
    }
     
-    }
+    } // ending of method for deletion of pateint information
     
     private String billNo;
 
@@ -85,7 +90,7 @@ public class DeleteClass {
         this.billNo = billNo;
     }
     
-        public void DeleteBillInfoMethod(){
+        public void DeleteBillInfoMethod(){ //starting method for deleting pateint bill information
     
     
       try{
@@ -96,7 +101,7 @@ public class DeleteClass {
          ps.setString(1, billNo);   
        
            ps.executeUpdate();
-            FacesContext.getCurrentInstance().addMessage(
+            FacesContext.getCurrentInstance().addMessage( //giving information  wether deletion successefull or not.
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
                             "Successfully deleted",
@@ -107,7 +112,7 @@ public class DeleteClass {
    System.out.print(e);
    }
     
-    }
+    } // ending of method for deletion of pateint information
 
  
 }

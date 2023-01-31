@@ -111,7 +111,7 @@
             
                
                      <label class="bill-lab">Admit Date</label>
-                     <h:inputText id="Admit-date" class="bill-textfield" value="#{billPayPage.a_date}" a:placeholder="Admit date.." required="true"/><br/>
+                     <h:inputText id="Admit-date" class="bill-textfield" value="#{billPayPage.a_date}" a:placeholder="Admit date.." required="true" maxlength="10"/><br/>
                     <label class="billl-lab">(DD-MM-YYYY)</label>
                  
                      </div>
@@ -121,7 +121,7 @@
               </div>
               <div class="bil-text_label"  style="display: flex;">
              <label class="bill-lab">Discharge Date</label>
-           <h:inputText id="Discharge-date" class="bill-textfield" value="#{billPayPage.d_date}" a:placeholder="Discharge date..." required="true"/><br/>
+           <h:inputText id="Discharge-date" class="bill-textfield" value="#{billPayPage.d_date}" a:placeholder="Discharge date..." required="true" maxlength="10"/><br/>
                  <label class="billl-lab">(DD-MM-YYYY)</label>
              </div>
                   <div class="bil-text_label">
@@ -142,7 +142,7 @@
                       
                       
                       <label class="bill-lab">Total Room Charge</label>
-<!--                     <h:inputText id="total-room-charge" class="bill-textfield" value="#{billPayPage.total_r_charge}" a:placeholder="Total Room..." required="true"/><br/>-->
+                     <h:inputText id="total-room-charge" class="bill-textfield" value="#{billPayPage.total_r_charge}" a:placeholder="Total Room..." required="true"/><br/>
                      
                    
                   </div>
@@ -151,14 +151,14 @@
                       
                       
                       <label class="bill-lab" >Billing Date</label>
-                     <h:inputText id="date" class="bill-textfield" value="#{billPayPage.b_date}" a:placeholder="Billing date..." required="true"/><br/>
+                     <h:inputText id="date" class="bill-textfield" value="#{billPayPage.b_date}" a:placeholder="Billing date..." required="true" maxlength="10"/><br/>
                       <label class="billl-lab">(DD-MM-YYYY)</label>
                    
                   </div>
                  <div class="bil-text_label">
                    
                       <label class="bill-lab">Total Charges </label>
-<!--                     <h:inputText id="total" class="bill-textfield" value="#{billPayPage.t_charge}" a:placeholder="Total charge..." required="true"/><br/>-->
+                    <h:inputText id="total" class="bill-textfield" value="#{billPayPage.t_charge}" a:placeholder="Total charge..." required="true"/><br/>
                      
                   </div>
                  <div class="bil-text_label">

@@ -17,7 +17,7 @@ import javax.faces.context.FacesContext;
 @SessionScoped
 public class UpDateClass {
        
-public  UpDateClass(){
+public  UpDateClass(){ // empty constructor 
 
 }
     public String getPhone() {
@@ -79,7 +79,7 @@ public  UpDateClass(){
     }
  
   
-  public void upDateMethod(){
+  public void upDateMethod(){ // starting of method for update of pateint information.
       try{
       
        DBConnection dbcon = new DBConnection();
@@ -94,7 +94,7 @@ public  UpDateClass(){
          ps.setInt(1, age);
         }
         else{
-       FacesContext.getCurrentInstance().addMessage(
+       FacesContext.getCurrentInstance().addMessage( // restricting that age cannot be zeroo or above 180 years.
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
                             "Age can't be Zero/Above 180!!!",
@@ -109,7 +109,7 @@ public  UpDateClass(){
                     ps.setString(6, id);
                       
             ps.executeUpdate();
-             FacesContext.getCurrentInstance().addMessage(
+             FacesContext.getCurrentInstance().addMessage( // giving information wether updation successfull or not.
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
                             "Successfully updated",
@@ -125,7 +125,7 @@ public  UpDateClass(){
       
       }
        
-  }
+  }// ending of method for update of pateint information
 
 
     public String getIdageOfSt() {
@@ -182,7 +182,7 @@ public  UpDateClass(){
     private String dateageOfSt;
   
   
-    public void upDateStaffMethod(){
+    public void upDateStaffMethod(){ // starting of method for update of staff information.
       try{
       
        DBConnection dbcon = new DBConnection();
@@ -196,7 +196,7 @@ public  UpDateClass(){
          ps.setInt(1, ageOfSt);
         }
         else{
-       FacesContext.getCurrentInstance().addMessage(
+       FacesContext.getCurrentInstance().addMessage( // restricting that age cannot be zeroo or above 180 years.
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
                             "Age can't be Zero/Above 180!!!",
@@ -210,7 +210,7 @@ public  UpDateClass(){
               ps.setString(6, idageOfSt);  
                       
             ps.executeUpdate();
-             FacesContext.getCurrentInstance().addMessage(
+             FacesContext.getCurrentInstance().addMessage( // giving information wether updation successfull or not.
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
                             "Successfully updated",
@@ -226,7 +226,7 @@ public  UpDateClass(){
       
       }
        
-  }
+  } // ending of method for update of staff information 
 
      
 }

@@ -17,7 +17,7 @@ import javax.faces.context.FacesContext;
 @ManagedBean
 @SessionScoped
 public class AddStaff {
-   public AddStaff(){
+   public AddStaff(){ // constructor for initialize some variables
        
         genderList = new ArrayList<>();
       
@@ -117,7 +117,7 @@ public class AddStaff {
         this.date = date;
     }
   
-    public void addStafff(){
+    public void addStafff(){ // method for insertion information about staff worker
           try {
            
             DBConnection dbcon = new DBConnection();
@@ -130,7 +130,7 @@ public class AddStaff {
          ps.setInt(2, age);
         }
         else{
-       FacesContext.getCurrentInstance().addMessage(
+       FacesContext.getCurrentInstance().addMessage( // restricting that age cannot be zeroo or above 180 years.
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
                             "Age can't be Zero/above 180!!!",
@@ -146,7 +146,7 @@ public class AddStaff {
                      
            ps.executeUpdate();
        
-              FacesContext.getCurrentInstance().addMessage(
+              FacesContext.getCurrentInstance().addMessage( // giving information wether insertion successfull or not.
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
                             "Successfully Inesrted",

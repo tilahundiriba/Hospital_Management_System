@@ -56,7 +56,7 @@ public class DataDisplayClass {
     private  String gender;
   public  String contact; 
   
-  
+  // constructor for initializing variables
   
   public  DataDisplayClass(String id,String fName,String lName,String gender,String age,String dr_name,String b_group,String address,String contact,String date)
   {  

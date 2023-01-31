@@ -42,7 +42,7 @@ public class SignUpPage {
     }
 
    
-public SignUpPage(){
+public SignUpPage(){ // constructor for initializing variables
   singUpTypeList = new ArrayList<>();
     singUpTypeList.add("Admin");
     singUpTypeList.add("Staff");
@@ -83,7 +83,7 @@ public SignUpPage(){
      
      Statement s5;
      
-     public void registrationMethod(){
+     public void registrationMethod(){ //srarting of method for regidtration of staff worker 
      try{
          SignUpPage ccc = new SignUpPage();
        DBConnection obj = new DBConnection();
@@ -95,7 +95,7 @@ public SignUpPage(){
             s5.executeQuery(sql);
   FacesContext.getCurrentInstance().addMessage(
                     null,
-                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN, //giving information wether registration is successefull or not.
                             "Successfully Registered",
                             ""));
      }

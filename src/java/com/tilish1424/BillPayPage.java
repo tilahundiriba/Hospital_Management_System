@@ -14,7 +14,7 @@ import javax.faces.context.FacesContext;
         
 public class BillPayPage {
    
-public BillPayPage(){
+public BillPayPage(){ // empty constructor 
 
 }
 
@@ -137,11 +137,11 @@ public String getB_date() {
     public void setTotal_r_charge(int total_r_charge) {
         this.total_r_charge = total_r_charge;
     }
-   public void billMothed(){
+   public void billMothed(){ // method for inserting pateint bill information
    
     
         try {
-            BillPayPage obj = new BillPayPage();
+            BillPayPage obj = new BillPayPage(); // creating object of the class
             
             DBConnection dbcon = new DBConnection();
             Connection con = dbcon.get_connection();
@@ -166,7 +166,7 @@ public String getB_date() {
               ps.setString(13, b_date);
               ps.executeUpdate();
        
-        FacesContext.getCurrentInstance().addMessage(
+        FacesContext.getCurrentInstance().addMessage( // giving information whether the insertion is successefull or not.
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
                             "Successfully Inesrted",

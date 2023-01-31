@@ -155,7 +155,7 @@
                      
                     
                    
-                     <h:selectOneRadio class="btn-group-justified" value="#{addpateint.gender}" required="true" requiredMessage="Age must be selected">   
+                     <h:selectOneRadio class="btn-group-justified" value="#{addpateint.gender}" required="true" requiredMessage="Gender must be selected">   
                             
                          <f:selectItems class="sex"  value="#{addpateint.genderList}"/>
                          
@@ -186,14 +186,14 @@
                  </div>
                   <div class="text_label">
                  <label class="lab">Contact:</label>
-                  <h:inputText id="contact" class="conntrol-textfield" value="#{addpateint.contact}" a:placeholder="Concact..." required="true"/><br/>
+                  <h:inputText id="contact" class="conntrol-textfield" value="#{addpateint.contact}" a:placeholder="Concact..." required="true" maxlength="13"/><br/>
                  </div>
                 <div class="text_label">
                    
                       
                       
                       <label class="lab">Date:</label>
-                     <h:inputText id="date" class="conntrol-textfield" value="#{addpateint.date}" a:placeholder="Date..." required="true"/><br/>
+                     <h:inputText id="date" class="conntrol-textfield" value="#{addpateint.date}" a:placeholder="Date..." required="true" maxlength="10"/><br/>
                      
                    
                   </div>

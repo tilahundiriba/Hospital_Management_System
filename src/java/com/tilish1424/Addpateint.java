@@ -120,7 +120,7 @@ public class Addpateint {
     public void setfName(String fName) {
         this.fName = fName;
     }
-public Addpateint(){
+public Addpateint(){ // constructor to initialize some variables
 
  genderList = new ArrayList<>();
       
@@ -130,7 +130,7 @@ public Addpateint(){
        
 
 }
-     public void pateintInsert() {
+     public void pateintInsert() { //method for adding pateint information
         try {
             
             DBConnection dbcon = new DBConnection();
@@ -141,7 +141,7 @@ public Addpateint(){
             ps.setString(2, fName);
            ps.setString(3, lName);
            ps.setString(4, gender);
-           if(age > 0 && age < 180){
+           if(age > 0 && age < 180){ // ristricting that age cannot be zero or above 180 years
                 ps.setInt(5, age);
            }else 
            {
@@ -160,7 +160,7 @@ public Addpateint(){
                       
             ps.executeUpdate();
        
-               FacesContext.getCurrentInstance().addMessage(
+               FacesContext.getCurrentInstance().addMessage( // givin information whether insertion seccussefull or not.
                     null,
                     new FacesMessage(FacesMessage.SEVERITY_WARN,
                             "Successfully Inesrted",

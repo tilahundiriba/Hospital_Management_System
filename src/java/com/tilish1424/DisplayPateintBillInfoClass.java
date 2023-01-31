@@ -76,7 +76,7 @@ public DisplayPateintBillInfoClass(){}
      private String t_charge;
      private String p_mode;
       private String total_r_charge;
-    
+                                     // constructor for initializing of variables
  public DisplayPateintBillInfoClass(String disease,String a_date,String b_no,String p_id,String r_no,String d_date,String r_charge,String s_charge,String n_days,String b_date,String t_charge,String p_mode,String total_r_charge)
  {
  this.disease=disease;

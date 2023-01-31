@@ -135,7 +135,7 @@
            </div>
            <div class="text_labe">
              <label class="lab"> Gender</label>
-                     <h:selectOneRadio class="btn-group-justified" value="#{addStaff.gender}" required="true" requiredMessage="Age must be selected">   
+                     <h:selectOneRadio class="btn-group-justified" value="#{addStaff.gender}" required="true" requiredMessage="Gender must be selected">   
                             
                          <f:selectItems class="sex"  value="#{addStaff.genderList}"/>
                          
@@ -147,7 +147,7 @@
            </div>
            <div class="text_labe">
              <label class="lab"> Phone</label>
-           <h:inputText id="phone" class="conntrol-textfield" value="#{addStaff.phone}" a:placeholder="Phone..." required="true"/>
+             <h:inputText id="phone" class="conntrol-textfield" value="#{addStaff.phone}" a:placeholder="Phone..." required="true" maxlength="13"/>
            </div>
            <div class="text_labe">
              <label class="lab"> Address</label>
@@ -155,7 +155,7 @@
            </div>
            <div class="text_labe">
              <label class="lab"> Join Date</label>
-             <h:inputText id="jDate" class="conntrol-textfield" value="#{addStaff.date}" a:placeholder="Date..." required="true"/>
+             <h:inputText id="jDate" class="conntrol-textfield" value="#{addStaff.date}" a:placeholder="Date..." required="true" maxlength="10"/>
            </div>
            <div class="lab">
                <h:commandButton value="SAVE" action="#{addStaff.addStafff()}" class="button" />  

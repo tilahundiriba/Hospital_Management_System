@@ -15,7 +15,7 @@ import javax.faces.bean.RequestScoped;
 
 public class DisplayStaffData2 {
       public List <DisplayStaffData> staffList;
-    public List <DisplayStaffData> getStaffinformation(){
+    public List <DisplayStaffData> getStaffinformation(){ // starting of method for displaying staff information
     staffList = new ArrayList<>();
     
     
@@ -36,7 +36,7 @@ public class DisplayStaffData2 {
                  String  phone = rs.getString("PHONE");
                    String  address = rs.getString("ADDRRESS");
                   String  dates = rs.getString("DATES");
-              
+              // initializing variable 
                 staffList.add(new DisplayStaffData(s_name,age1,s_id,sex,prof,phone,address,dates));
             } 
              

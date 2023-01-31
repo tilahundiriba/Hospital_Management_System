@@ -33,15 +33,13 @@ return pwd;
    
    return name;
    }
-   public String diplayeName(){
-       return "loginpage";
-   }
+ 
 
     
     
     
     
-     public String validateMethod() throws SQLException, ClassNotFoundException {
+     public String validateMethod() throws SQLException, ClassNotFoundException { //starting of method for validation of password and username
         boolean status = ValidateClass.validate(name, pwd);
         if (status) {
               DBConnection dbcon = new DBConnection();
@@ -63,7 +61,7 @@ return pwd;
         } else {
             FacesContext.getCurrentInstance().addMessage(
                     null,
-                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN,// giving information wether validation is successfull or not.
                             "Incorrect Username and Passowrd",
                             "Please enter correct username and Password"));
             return "ManuPage";

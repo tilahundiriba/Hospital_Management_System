@@ -18,7 +18,7 @@ import javax.faces.bean.RequestScoped;
 
 public class DisplayPateintData {
   public List <DataDisplayClass> arrayList;
-    public List <DataDisplayClass> getpateintlist(){
+    public List <DataDisplayClass> getpateintlist(){ // starting of method for displaying pateint information 
     arrayList = new ArrayList<>();
     try{
         
@@ -48,12 +48,12 @@ public class DisplayPateintData {
     }
     
     return arrayList;
-    }
+    } //ending of method for displaying pateint information 
     
     
     private int pateintId;
 
-    public int getPateintId() {
+    public int getPateintId() { 
         return pateintId;
     }
 
@@ -61,7 +61,7 @@ public class DisplayPateintData {
         this.pateintId = pateintId;
     }
      public List <Addpateint> singleList;
-    public List <Addpateint> getsinglelist(){
+    public List <Addpateint> getsinglelist(){// starting of method for displaying single  pateint information 
     singleList = new ArrayList<>();
     try{
         
@@ -96,7 +96,14 @@ public class DisplayPateintData {
     }
     
     return singleList;
-    }
+    }  //ending of method for displaying single  pateint information 
+    
+    
+    
+    
+    
+    
+    
     private int staffid;
 
     public int getStaffid() {
@@ -108,7 +115,7 @@ public class DisplayPateintData {
     }
     
      public List <AddStaff> staffList;
-    public List <AddStaff> getsinglestafflist(){
+    public List <AddStaff> getsinglestafflist(){ // starting of method for displaying single  staff information 
     staffList = new ArrayList<>();
     try{
         
@@ -141,7 +148,7 @@ public class DisplayPateintData {
     }
     
     return staffList;
-    }
+    } //ending of method for displaying single  pateint information 
     
     private int billno;
 
@@ -154,7 +161,8 @@ public class DisplayPateintData {
     }
     
          public List <BillPayPage> billList;
-    public List <BillPayPage> getsinglebilllist(){
+    public List <BillPayPage> getsinglebilllist() //starting of method for displaying single  pateint bill information 
+    {  
     billList = new ArrayList<>();
     try{
         
@@ -191,5 +199,5 @@ public class DisplayPateintData {
     }
     
    return billList;
-   }
+   }//ending of method for displaying single  pateint bill information 
 }

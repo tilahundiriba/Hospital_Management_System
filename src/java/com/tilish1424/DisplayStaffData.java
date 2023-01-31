@@ -49,8 +49,8 @@ public class DisplayStaffData {
     private  String phonee;
     private  String addresss;
     private  String date;
-    
-    
+     
+     // constructor for initializing  variables
     public  DisplayStaffData( String name, String age, String id, String gender, String proff, String phonee, String addresss, String date)
     {
     this.name=name;

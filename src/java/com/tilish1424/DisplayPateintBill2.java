@@ -17,7 +17,7 @@ import javax.faces.bean.SessionScoped;
 public class DisplayPateintBill2 {
   public DisplayPateintBill2(){}
      public List <DisplayPateintBillInfoClass> billList;
-    public List <DisplayPateintBillInfoClass> getbillList(){
+    public List <DisplayPateintBillInfoClass> getbillList(){ // method for displaying pateint bill information 
     billList = new ArrayList<>(); 
     
       try{
